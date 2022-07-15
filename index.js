@@ -30,8 +30,6 @@ function listHover(o) {
         .closest(".hero__nav")
         .querySelectorAll(".hero__nav-link");
 
-      console.log(link);
-
       siblings.forEach((el) => {
         if (el !== link) el.style.opacity = o;
       });
@@ -42,24 +40,19 @@ function listHover(o) {
 NAV.addEventListener("mouseover", listHover(0.5));
 NAV.addEventListener("mouseout", listHover(1));
 
-// const handleHover = function (o) {
-//   return function (e) {
-//     if (e.target.classList.contains("nav__link")) {
-//       const link = e.target;
-//       const siblings = link.closest(".nav").querySelectorAll(".nav__link");
-//       const logo = link.closest(".nav").querySelector("img");
+// TODO: Fix dis ↓↓↓
+function textSlide(entries) {
+  const [entry] = entries;
+  console.log(entry);
+  entry.target.classList.remove("reveal");
+}
 
-//       siblings.forEach((el) => {
-//         if (el !== link) el.style.opacity = o;
-//       });
+const aboutObserver = new IntersectionObserver(textSlide, {
+  root: null,
+  threshold: 1,
+});
 
-//       logo.style.opacity = o;
-//     }
-//   };
-// };
-
-// nav.addEventListener("mouseover", handleHover(0.5));
-// nav.addEventListener("mouseout", handleHover(1));
+aboutObserver.observe(document.querySelector(".content__text"));
 
 var rot = 360;
 
@@ -69,8 +62,3 @@ SEAL.addEventListener("click", function () {
   console.log(rot);
   console.log(SEAL.style);
 });
-
-// window.addEventListener("scroll", function () {
-//   const distance = window.scrollY;
-//   HERO.style.transform = `translateY(${distance * 1}px)`;
-// });

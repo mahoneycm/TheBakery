@@ -34,6 +34,11 @@ html {
   font-size: 62.5%;
 }
 
+a {
+  color: var(--white-light);
+  font-family: "Archivo Black", sans-serif;
+}
+
 body {
   font-size: 1rem;
   overflow-x: hidden;
@@ -43,8 +48,22 @@ header {
   position: relative;
 }
 
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--burgandy-dark);
+}
+
 .hidden {
   display: none;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(8rem);
+}
+
+.img-wrapper {
+  overflow: hidden;
 }
 
 .rotate {
@@ -62,12 +81,31 @@ header {
   z-index: 5;
 }
 
+.btn {
+  border: none;
+  position: relative;
+  transform: translate(0);
+  top: auto;
+  left: auto;
+  margin: 2.5rem 20%;
+  padding: 1rem;
+  background-color: var(--burgandy);
+  border-radius: 1rem;
+  font-size: 3rem;
+}
+.btn:hover {
+  background-color: var(--burgandy-dark);
+}
+.section {
+  padding-top: 5rem;
+}
+
 .hero {
   display: flex;
   align-items: flex-start;
   height: 90vh;
   overflow: hidden;
-  background-image: linear-gradient(to bottom, rgba(161, 44, 11, 0.8), hsla(240deg, 4%, 17%, 0.724)), url(../img/ControlA.jpg);
+  background-image: linear-gradient(to bottom, rgba(74, 31, 26, 0.8823529412), hsla(240deg, 3%, 17%, 0.399), rgba(0, 0, 0, 0)), url(../img/ControlA.jpg);
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -103,7 +141,7 @@ header {
 }
 .hero__nav {
   align-items: center;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
@@ -165,57 +203,81 @@ header {
   z-index: 1;
   display: flex;
   flex-direction: column;
+  transition: all 0.5s;
+  background-color: var(--white);
 }
 .content__about {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 4rem;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  padding: 5rem 3rem;
-  background-color: var(--white);
 }
 .content__about p {
   margin: auto;
-  max-width: 700px;
+  max-width: 800px;
   color: var(--burgandy-dark);
+  padding: 0 2rem;
 }
-.content__about p:not(:last-child) {
-  padding-bottom: 2rem;
-}
-.content__studios {
+.content__rooms {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  background-color: var(--burgandy);
 }
-.content__studios-item {
-  flex: 0 0 25%;
-  margin: 5rem;
-  padding: 2rem 2rem 2rem;
-  background-color: var(--white);
-  border-radius: 1rem;
+.content__rooms-items {
+  display: flex;
+}
+.content__rooms-item {
   text-decoration: none;
-  transition: all 0.2s;
+  position: relative;
 }
-.content__studios-item:hover {
-  transition: all 0.2s;
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: rgba(0, 0, 0, 0.8) 0px 7px 29px 0px;
-}
-.content__studios-title {
-  color: #333;
-  font-family: "braggadocio-regular", sans-serif;
-  font-weight: 1000;
+.content__rooms-title {
   text-align: center;
   font-size: 5rem;
-  margin: 2rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.content__studios-img {
+.content__rooms-img {
   width: 100%;
   display: block;
+  filter: brightness(50%);
+  transition: filter 0.4s, transform 0.4s;
+}
+.content__rooms-img:hover {
+  filter: brightness(100%);
+  transform: scale(110%);
+}
+@media screen and (min-width: 800px) {
+  .content__rooms {
+    flex-direction: row;
+  }
+  .content__rooms-item:hover {
+    transform: none;
+  }
+  .content__rooms-img {
+    width: 45vw;
+  }
+}
+.content__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.content__contact p {
+  margin: auto;
+  max-width: 700px;
+  color: rgb(15, 15, 15);
 }
 .content__footer {
-  background-color: var(--teal);
+  background-color: var(--teal-dark);
+  padding-top: 0;
   height: 40vh;
   font-size: 30rem;
   text-align: center;
@@ -226,7 +288,17 @@ header {
 }
 .content__footer p {
   font-size: 3rem;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+}
+@media screen and (min-width: 800px) {
+  .content__footer {
+    flex-direction: row;
+  }
+}
+
+.cake {
+  height: 15rem;
 }
 
 .seal {
@@ -253,6 +325,10 @@ header {
 }
 .socials-icon:hover {
   fill: var(--white-highlight);
+}
+
+.email-link {
+  font-size: 3rem;
 }
 
 .opened {

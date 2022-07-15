@@ -18,6 +18,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script defer src="index.js"></script>
   </head>
   <body>
     <header class="hero">
@@ -56,8 +57,8 @@
       </div>
     </header>
     <main class="content">
-      <div class="content__about">
-        <p class="">
+      <div class="section content__about">
+        <p class="content__text reveal">
           Located in the blooming Scotts Addition neighborhood of Richmond,
           Virginia, The Bakery is within minutes of all the city has to offer.
           This tasty cornerstone is the collaborative effort of Open Your Ears
@@ -67,48 +68,70 @@
         </p>
         <p class="">Can you smell what's cookin'?</p>
       </div>
-      <div class="content__studios">
-        <a href="#" class="content__studios-item">
-          <img
-            src="img/LiveA.jpg"
-            alt="Studio A"
-            title="Studio A"
-            class="content__studios-img"
-          />
-          <div class="content__studios-title">Studio A</div>
+      <div class="section content__rooms">
+        <a href="#" class="content__rooms-item">
+          <div class="img-wrapper">
+            <img
+              src="img/LiveMock.jpg"
+              alt="Studio A"
+              title="Studio A"
+              class="content__rooms-img"
+            />
+          </div>
+
+          <div class="content__rooms-title">Studio</div>
         </a>
-        <a href="#" class="content__studios-item">
-          <img
-            src="img/LiveB.jpg"
-            alt="Studio B"
-            title="Studio B"
-            class="content__studios-img"
-          />
-          <div class="content__studios-title">Studio B</div>
+        <a href="#" class="content__rooms-item">
+          <div class="img-wrapper">
+            <img
+              src="img/RoomMock.jpg"
+              alt="Studio B"
+              title="Studio B"
+              class="content__rooms-img"
+            />
+          </div>
+
+          <div class="content__rooms-title">Amenities</div>
         </a>
       </div>
-      <div class="content__footer">
+      <div class="section content__contact">
+        <img src="/img/cake/BurgTrans.png" class="cake" />
+        <h2>Ready to get cooking?</h2>
+        <p class="content__text">
+          Contact us for a free consultation and site visit!
+        </p>
+        <a class="btn">Contact Us</a>
+      </div>
+      <div class="section content__footer">
         <img src="img/seal/burg.png" alt="The Backery Seal" class="seal" />
-        <div class="socials">
-          <a href="#" class="socials-btn">
-            <svg class="socials-icon">
-              <use xlink:href="img/symbol-defs.svg#icon-facebook"></use>
-            </svg>
-          </a>
-          <a href="/pages/about.html" class="socials-btn">
-            <svg class="socials-icon">
-              <use xlink:href="img/symbol-defs.svg#icon-instagram"></use>
-            </svg>
-          </a>
-          <a href="#" class="socials-btn">
-            <svg class="socials-icon">
-              <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
-            </svg>
-          </a>
+        <div class="content__footer-text"><p>1710 Altamont Ave. 23230</p></div>
+        <div class="content__footer-contact">
+          <div class="socials">
+            <a href="#" class="socials-btn">
+              <svg class="socials-icon">
+                <use xlink:href="img/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="/pages/about.html" class="socials-btn">
+              <svg class="socials-icon">
+                <use xlink:href="img/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href="#" class="socials-btn">
+              <svg class="socials-icon">
+                <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </div>
+          <!-- <div class="content__footer-email">
+            <a
+              href="mailto:info@thebakeryrecordingstudios.com"
+              class="email-link"
+              >info@thebakeryrecordingstudios.com</a
+            >
+          </div> -->
         </div>
-        <p>The Bakery ©</p>
       </div>
     </main>
-    <script src="index.js" async defer></script>
   </body>
 </html>

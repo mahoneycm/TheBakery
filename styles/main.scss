@@ -46,6 +46,11 @@ html {
   font-size: 62.5%;
 }
 
+a {
+  color: var(--white-light);
+  font-family: "Archivo Black", sans-serif;
+}
+
 body {
   font-size: 1rem;
   overflow-x: hidden;
@@ -55,8 +60,23 @@ header {
   position: relative;
 }
 
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--burgandy-dark);
+}
+
 .hidden {
   display: none;
+}
+
+.reveal {
+  // opacity: 0;
+  position: relative;
+  transform: translateY(8rem);
+}
+
+.img-wrapper {
+  overflow: hidden;
 }
 
 .rotate {
@@ -74,6 +94,32 @@ header {
   z-index: 5;
 }
 
+.btn {
+  border: none;
+  position: relative;
+  transform: translate(0);
+  top: auto;
+  left: auto;
+
+  margin: 2.5rem 20%;
+  padding: 1rem;
+  background-color: var(--burgandy);
+  border-radius: 1rem;
+
+  font-size: 3rem;
+
+  &:hover {
+    background-color: var(--burgandy-dark);
+  }
+
+  @include respond(tablet) {
+  }
+}
+
+.section {
+  padding-top: 5rem;
+}
+
 // HERO SECTION
 
 .hero {
@@ -84,8 +130,9 @@ header {
 
   background-image: linear-gradient(
       to bottom,
-      rgba(161, 44, 11, 0.8),
-      hsla(240, 4%, 17%, 0.724)
+      #4a1f1ae1,
+      hsla(240, 3%, 17%, 0.399),
+      rgba(0, 0, 0, 0)
     ),
     url(../img/ControlA.jpg);
   background-position: center center;
@@ -129,7 +176,7 @@ header {
 
   &__nav {
     align-items: center;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -195,75 +242,127 @@ header {
   }
 }
 
-/////////////////////////////
+///////////////////////////////////////////////
 // Content
 .content {
   z-index: 1;
   display: flex;
   flex-direction: column;
+  transition: all 0.5s;
+  background-color: var(--white);
+
   &__about {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 4rem;
     text-align: center;
 
     font-family: "Open Sans", sans-serif;
 
     font-weight: 400;
-    padding: 5rem 3rem;
-    background-color: var(--white);
+    // padding: 5rem 3rem;
 
     p {
       margin: auto;
-      max-width: 700px;
+      max-width: 800px;
       color: var(--burgandy-dark);
-
-      &:not(:last-child) {
-        padding-bottom: 2rem;
-      }
+      padding: 0 2rem;
     }
   }
 
-  &__studios {
+  &__rooms {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    background-color: var(--burgandy);
+
+    &-items {
+      display: flex;
+    }
 
     &-item {
-      flex: 0 0 25%;
-      margin: 5rem;
-      padding: 2rem 2rem 2rem;
-      background-color: var(--white);
+      // flex: 0 0 25%;
+      // margin: 5rem;
+      // padding: 2rem 2rem 2rem;
+      // background-color: var(--white);
 
-      border-radius: 1rem;
+      // border-radius: 1rem;
       text-decoration: none;
+      position: relative;
+      // transition: all 0.2s;
 
-      transition: all 0.2s;
-
-      &:hover {
-        transition: all 0.2s;
-        transform: scale(1.1) rotate(5deg);
-        box-shadow: rgba(0, 0, 0, 0.8) 0px 7px 29px 0px;
-      }
+      // &:hover {
+      //   transition: all 0.2s;
+      //   transform: scale(1.1) rotate(5deg);
+      //   box-shadow: rgba(0, 0, 0, 0.8) 0px 7px 29px 0px;
+      // }
     }
 
     &-title {
-      color: #333;
-      font-family: "braggadocio-regular", sans-serif;
-
-      font-weight: 1000;
+      // font-weight: 1000;
       text-align: center;
       font-size: 5rem;
-      margin: 2rem 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include respond(tablet) {
+        // position: relative;
+        // transform: translate(0);
+        // top: auto;
+        // left: auto;
+      }
     }
 
     &-img {
       width: 100%;
       display: block;
+      filter: brightness(50%);
+      transition: filter 0.4s, transform 0.4s;
+
+      &:hover {
+        filter: brightness(100%);
+        transform: scale(110%);
+      }
+    }
+
+    @include respond(tablet) {
+      flex-direction: row;
+
+      &-item {
+        &:hover {
+          transform: none;
+        }
+      }
+
+      &-img {
+        width: 45vw;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 2rem;
+    line-height: 4rem;
+    text-align: center;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-weight: 400;
+
+    p {
+      margin: auto;
+      max-width: 700px;
+      color: rgb(15, 15, 15);
     }
   }
 
   &__footer {
-    background-color: var(--teal);
+    background-color: var(--teal-dark);
+    padding-top: 0;
     height: 40vh;
     font-size: 30rem;
     text-align: center;
@@ -274,9 +373,18 @@ header {
 
     p {
       font-size: 3rem;
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Archivo Black", sans-serif;
+      color: var(--white);
+    }
+
+    @include respond(tablet) {
+      flex-direction: row;
     }
   }
+}
+
+.cake {
+  height: 15rem;
 }
 
 .seal {
@@ -306,6 +414,10 @@ header {
       fill: var(--white-highlight);
     }
   }
+}
+
+.email-link {
+  font-size: 3rem;
 }
 
 ////////////////////////////
