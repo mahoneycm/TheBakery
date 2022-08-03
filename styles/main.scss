@@ -44,16 +44,18 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 a {
   color: var(--white-light);
-  font-family: "Archivo Black", sans-serif;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 body {
   font-size: 1rem;
   overflow-x: hidden;
+  position: relative;
 }
 
 header {
@@ -61,7 +63,7 @@ header {
 }
 
 h2 {
-  font-family: "Archivo Black", sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   color: var(--burgandy-dark);
 }
 
@@ -195,7 +197,7 @@ h2 {
     }
 
     &-items {
-      font-family: "Archivo Black", sans-serif;
+      font-family: 'Archivo Black', sans-serif;
       color: var(--white);
       list-style: none;
       font-size: 2rem;
@@ -227,7 +229,7 @@ h2 {
       }
 
       &::after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         bottom: -0.5rem;
@@ -256,7 +258,7 @@ h2 {
     line-height: 4rem;
     text-align: center;
 
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
     font-weight: 400;
     // padding: 5rem 3rem;
@@ -349,7 +351,7 @@ h2 {
     line-height: 4rem;
     text-align: center;
 
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
     font-weight: 400;
 
@@ -373,7 +375,7 @@ h2 {
 
     p {
       font-size: 3rem;
-      font-family: "Archivo Black", sans-serif;
+      font-family: 'Archivo Black', sans-serif;
       color: var(--white);
     }
 
