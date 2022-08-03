@@ -32,6 +32,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 a {
@@ -42,6 +43,7 @@ a {
 body {
   font-size: 1rem;
   overflow-x: hidden;
+  position: relative;
 }
 
 header {
