@@ -143,7 +143,7 @@ h2 {
 }
 .hero__nav {
   align-items: center;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;

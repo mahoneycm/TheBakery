@@ -9,17 +9,30 @@ const SEAL = document.querySelector('.seal');
 
 // NAVIGATION
 
+let navOpen = false;
+
 MENU_BUTTON.addEventListener('click', function () {
   MENU_BUTTON.classList.toggle('hidden');
   NAV.classList.toggle('opened');
   OVERLAY.classList.toggle('hidden');
+  navOpen = !navOpen;
 });
 
-OVERLAY.addEventListener('click', function () {
-  NAV.classList.toggle('opened');
+function closeNav() {
+  NAV.classList.remove('opened');
   MENU_BUTTON.classList.remove('hidden');
   OVERLAY.classList.add('hidden');
-});
+
+  navOpen = false;
+}
+
+OVERLAY.addEventListener('click', closeNav);
+
+window.onscroll = function (e) {
+  if (navOpen) {
+    closeNav();
+  }
+};
 
 function listHover(o) {
   return function (e) {
@@ -48,7 +61,7 @@ function textSlide(entries) {
 }
 
 const aboutObserver = new IntersectionObserver(textSlide, {
-  root: null,
+  root: document.querySelector('.content__text'),
   threshold: 1,
 });
 
