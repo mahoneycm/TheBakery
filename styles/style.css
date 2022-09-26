@@ -50,6 +50,11 @@ header {
   position: relative;
 }
 
+h1 {
+  color: var(--burgandy);
+  font-family: "Archivo Black", sans-serif;
+}
+
 h2 {
   font-family: "Archivo Black", sans-serif;
   color: var(--burgandy-dark);
@@ -331,6 +336,21 @@ h2 {
 
 .email-link {
   font-size: 3rem;
+}
+
+.eqColumns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.eqColumn {
+  margin: 2rem;
+  flex-basis: 30%;
+}
+
+.eqListItem {
+  list-style: none;
 }
 
 .opened {
