@@ -453,6 +453,27 @@ h2 {
 }
 
 ////////////////////////////
+// Rooms
+
+.studio-img {
+  width: 75vw;
+}
+
+.gallery-container {
+  width: 75vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-self: center;
+  margin: auto;
+}
+
+.gallery__img {
+  width: 30%;
+}
+
+////////////////////////////
 // MEDIA QUERIES
 
 @mixin respond-phone {

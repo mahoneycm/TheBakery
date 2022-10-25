@@ -357,6 +357,24 @@ h2 {
   font-size: 3rem;
 }
 
+.studio-img {
+  width: 75vw;
+}
+
+.gallery-container {
+  width: 75vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-self: center;
+  margin: auto;
+}
+
+.gallery__img {
+  width: 30%;
+}
+
 .opened {
   transform: translateX(0);
   transition: transform 1s;
