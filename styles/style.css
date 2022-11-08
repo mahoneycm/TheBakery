@@ -44,6 +44,12 @@ body {
   font-size: 1rem;
   overflow-x: hidden;
   position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+body.home {
+  background: linear-gradient(to bottom, rgba(122, 46, 38, 0.392), rgba(0, 0, 0, 0.475)), url(../img/ControlA.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 header {
@@ -105,6 +111,57 @@ h2 {
 }
 .section {
   padding-top: 5rem;
+}
+
+.main-container {
+  width: 100vw;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+.home__logo {
+  width: 33vw;
+  filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg) brightness(100%) contrast(93%);
+}
+.home__nav {
+  width: 70vw;
+}
+.home__nav-link {
+  text-decoration: none;
+  display: inline-block;
+}
+.home__nav-link:hover::after {
+  transform: scaleX(1);
+  transition: all 0.2s;
+}
+.home__nav-link::after {
+  content: "";
+  display: block;
+  bottom: -0.5rem;
+  width: 100%;
+  height: 4px;
+  background-color: var(--teal);
+  border-radius: 10px 10px 10px 10px;
+  transform: scaleX(0);
+}
+.home__nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.home__nav-list--item {
+  font-family: "braggadocio-regular", sans-serif;
+  font-size: 4rem;
+  color: var(--white);
+  list-style: none;
+  flex: 1 1 0;
+  text-align: center;
+  position: relative;
 }
 
 .hero {

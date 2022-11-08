@@ -49,13 +49,25 @@ html {
 
 a {
   color: var(--white-light);
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
 }
 
 body {
   font-size: 1rem;
   overflow-x: hidden;
   position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  &.home {
+    background: linear-gradient(
+        to bottom,
+        rgba(122, 46, 38, 0.392),
+        rgba(0, 0, 0, 0.475)
+      ),
+      url(../img/ControlA.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 
 header {
@@ -64,11 +76,11 @@ header {
 
 h1 {
   color: var(--burgandy);
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
 }
 
 h2 {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Archivo Black", sans-serif;
   color: var(--burgandy-dark);
 }
 
@@ -125,6 +137,69 @@ h2 {
 
 .section {
   padding-top: 5rem;
+}
+
+.main-container {
+  width: 100vw;
+}
+
+// HOME
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+
+  &__logo {
+    width: 33vw;
+    filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg)
+      brightness(100%) contrast(93%);
+  }
+
+  &__nav {
+    width: 70vw;
+
+    &-link {
+      text-decoration: none;
+      display: inline-block;
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          transition: all 0.2s;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        bottom: -0.5rem;
+        width: 100%;
+        height: 4px;
+        background-color: var(--teal);
+        border-radius: 10px 10px 10px 10px;
+        transform: scaleX(0);
+      }
+    }
+
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+
+      &--item {
+        font-family: "braggadocio-regular", sans-serif;
+        font-size: 4rem;
+        color: var(--white);
+        list-style: none;
+        flex: 1 1 0;
+        text-align: center;
+        position: relative;
+      }
+    }
+  }
 }
 
 // HERO SECTION
@@ -202,7 +277,7 @@ h2 {
     }
 
     &-items {
-      font-family: 'Archivo Black', sans-serif;
+      font-family: "Archivo Black", sans-serif;
       color: var(--white);
       list-style: none;
       font-size: 2rem;
@@ -234,7 +309,7 @@ h2 {
       }
 
       &::after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         bottom: -0.5rem;
@@ -263,7 +338,7 @@ h2 {
     line-height: 4rem;
     text-align: center;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 
     font-weight: 400;
     // padding: 5rem 3rem;
@@ -356,7 +431,7 @@ h2 {
     line-height: 4rem;
     text-align: center;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 
     font-weight: 400;
 
@@ -380,7 +455,7 @@ h2 {
 
     p {
       font-size: 3rem;
-      font-family: 'Archivo Black', sans-serif;
+      font-family: "Archivo Black", sans-serif;
       color: var(--white);
     }
 
