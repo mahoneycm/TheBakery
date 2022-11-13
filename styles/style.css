@@ -57,8 +57,9 @@ header {
 }
 
 h1 {
-  color: var(--burgandy);
-  font-family: "Archivo Black", sans-serif;
+  color: var(--white);
+  font-family: "Archivo", sans-serif;
+  font-size: 15rem;
 }
 
 h2 {
@@ -117,6 +118,39 @@ h2 {
   width: 100vw;
 }
 
+.landing {
+  margin: 2rem;
+}
+.landing__link {
+  background-color: rgba(59, 124, 122, 0.8);
+  transform: skewX(-15deg);
+  padding: 1rem;
+  display: inline-block;
+}
+.landing__link a {
+  display: inline-block;
+  transform: skewX(15deg);
+  font-family: "Open Sans", sans-serif;
+  font-size: 4rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo {
+  height: 50rem;
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -167,7 +201,9 @@ h2 {
 .hero {
   display: flex;
   align-items: flex-start;
-  height: 90vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
   overflow: hidden;
   background-image: linear-gradient(to bottom, rgba(74, 31, 26, 0.8823529412), hsla(240deg, 3%, 17%, 0.399), rgba(0, 0, 0, 0)), url(../img/ControlA.jpg);
   background-position: center center;

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo&family=Archivo+Black&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -22,30 +22,51 @@
   </head>
   <body class="home">
     <main class="main-container">
-      <div class="home">
-        <img
-          src="img/word/black.png"
-          alt="The Bakery Recording Studio"
-          class="home__logo"
-        />
-        <nav class="home__nav">
-          <ul class="home__nav-list">
-            <li class="home__nav-list--item">
-              <a href="./pages/about.html" class="home__nav-link">About</a>
-            </li>
-            <li class="home__nav-list--item">
-              <a href="./pages/rooms.html" class="home__nav-link">Rooms</a>
-            </li>
-            <li class="home__nav-list--item">
-              <a href="./pages/equipment.html" class="home__nav-link"
-                >Epuipment</a
-              >
-            </li>
-            <li class="home__nav-list--item">
-              <a href="./pages/contact.html" class="home__nav-link">Contact</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="hero">
+        <div class="hero__span">
+          <a href="index.html" class="hero__img-link">
+            <img
+              src="img/word/black.png"
+              alt="The Bakery Recording Studio"
+              class="hero__img"
+            />
+          </a>
+          <button class="hero__menu-btn">
+            <svg class="hero__menu-btn-icon">
+              <use xlink:href="img/symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <nav class="hero__nav">
+            <ul class="hero__nav-items">
+              <li class="hero__nav-item">
+                <a href="./pages/about.html" class="hero__nav-link">About</a>
+              </li>
+              <li class="hero__nav-item">
+                <a href="./pages/rooms.html" class="hero__nav-link">Rooms</a>
+              </li>
+              <li class="hero__nav-item">
+                <a href="./pages/equipment.html" class="hero__nav-link"
+                  >Equipment</a
+                >
+              </li>
+              <li class="hero__nav-item">
+                <a href="./pages/contact.html" class="hero__nav-link"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="overlay hidden"></div>
+        </div>
+        <div class="landing">
+          <h1>The Bakery Recording Studios</h1>
+          <p>
+            <div class="landing__link">
+
+              <a href="" class="">Book a session →</a>
+            </div>
+          </p>
+        </div>
       </div>
     </main>
   </body>
