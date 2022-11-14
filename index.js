@@ -1,8 +1,8 @@
 "use strict";
 
-const MENU_BUTTON = document.querySelector(".hero__menu-btn");
-const NAV = document.querySelector(".hero__nav");
-const navLink = document.querySelectorAll(".hero__nav-link");
+const MENU_BUTTON = document.querySelector(".nav__menu-btn");
+const NAV = document.querySelector(".nav__navigation");
+const navLink = document.querySelectorAll(".nav__navigation-link");
 const OVERLAY = document.querySelector(".overlay");
 const HEADER = document.querySelector(".hero");
 const SEAL = document.querySelector(".seal");
@@ -55,7 +55,7 @@ NAV.addEventListener("mouseout", listHover(1));
 // TODO: Fix dis ↓↓↓
 function textSlide(entries) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
   entry.target.classList.remove("reveal");
 }
 
@@ -71,6 +71,6 @@ var rot = 360;
 SEAL.addEventListener("click", function () {
   SEAL.style.transform = "rotate(" + rot + "deg)";
   rot += 360;
-  console.log(rot);
-  console.log(SEAL.style);
+  // console.log(rot);
+  // console.log(SEAL.style);
 });
