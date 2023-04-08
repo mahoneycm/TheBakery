@@ -55,10 +55,6 @@ body {
   position: relative;
 }
 
-header {
-  position: relative;
-}
-
 h1 {
   color: var(--burgandy);
   font-family: "Archivo Black", sans-serif;
@@ -71,12 +67,6 @@ h2 {
 
 .hidden {
   display: none;
-}
-
-.reveal {
-  // opacity: 0;
-  position: relative;
-  transform: translateY(8rem);
 }
 
 .img-wrapper {
@@ -125,7 +115,7 @@ h2 {
 }
 
 .hero {
-  height: 80vh;
+  height: 100vh;
 }
 
 ///////////////////////////////////////////////
