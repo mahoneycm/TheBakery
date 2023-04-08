@@ -1,11 +1,13 @@
 @import "./mixins/respondBreakpoints";
 
 .header {
+  position: absolute;
   display: flex;
   flex: 0 0 100%;
   padding: 2rem;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   &__img {
     height: 10rem;
