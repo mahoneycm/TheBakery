@@ -1,24 +1,26 @@
 @import "./mixins/_respondBreakpoints.scss";
 
-.footer {
+footer {
   background-color: var(--grey-dark);
   padding-top: 0;
-  height: 20rem;
   font-size: 30rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding: 5rem 0;
 
   p {
     font-size: 3rem;
     font-family: "Archivo Black", sans-serif;
     color: var(--white);
+    padding: 3rem 0;
   }
 
   @include respond(tablet) {
     flex-direction: row;
+    height: 20rem;
   }
 }
 
