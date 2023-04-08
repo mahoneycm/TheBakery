@@ -1,0 +1,101 @@
+@import "./mixins/respondBreakpoints";
+
+.header {
+  display: flex;
+  flex: 0 0 100%;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img {
+    height: 10rem;
+    filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg)
+      brightness(100%) contrast(93%);
+  }
+
+  &__menu-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+    margin-left: auto;
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__menu-btn-icon {
+    height: 4rem;
+    width: 4rem;
+    fill: whitesmoke;
+  }
+
+  &__nav {
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--grey-dark);
+    z-index: 10;
+
+    transition: transform 1s;
+    transform: translateX(105%);
+
+    @include respond(tablet) {
+      display: flex;
+      position: relative;
+      height: auto;
+      background-color: transparent;
+      transform: translateX(0);
+    }
+
+    &-items {
+      font-family: "Archivo Black", sans-serif;
+      color: var(--white);
+      list-style: none;
+      font-size: 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      @include respond(tablet) {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+      }
+    }
+
+    &-item {
+      margin: 3rem;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: var(--white);
+      position: relative;
+      transition: opacity 0.5s;
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -0.5rem;
+        width: 100%;
+        height: 4px;
+        background-color: var(--teal);
+        border-radius: 10px 10px 10px 10px;
+        transform: scaleX(0);
+        transition: all 0.2s;
+      }
+    }
+  }
+}

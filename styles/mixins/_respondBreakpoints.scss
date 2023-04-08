@@ -1,0 +1,7 @@
+@mixin respond($bp) {
+  @if $bp == tablet {
+    @media screen and (min-width: 800px) {
+      @content;
+    }
+  }
+}

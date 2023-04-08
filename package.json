@@ -4,7 +4,7 @@
   "description": "The Bakery Studios",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass styles/main.scss styles/style.css -w",
+    "watch:sass": "sass styles/main.scss bundle.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/mahoneycm/TheBakery#readme",
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "live-server": "^1.1.0",
     "sass": "^1.52.1"
   },
