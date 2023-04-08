@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass styles/main.scss bundle.css -w",
-    "devserver": "live-server",
+    "devserver": "npx @11ty/eleventy --serve",
     "start": "npm-run-all --parallel devserver watch:sass"
   },
   "repository": {
