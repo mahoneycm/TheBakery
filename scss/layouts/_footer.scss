@@ -1,7 +1,7 @@
-@import "./mixins/_respondBreakpoints.scss";
+@import "../abstracts/mixins/respondBreakpoints";
 
 footer {
-  background-color: var(--grey-dark);
+  background-color: $grey-dark;
   padding-top: 0;
   font-size: 30rem;
   text-align: center;
@@ -14,7 +14,7 @@ footer {
   p {
     font-size: 3rem;
     font-family: "Archivo Black", sans-serif;
-    color: var(--white);
+    color: $white;
     padding: 3rem 0;
   }
 
@@ -49,14 +49,18 @@ footer {
   &-icon {
     height: 5rem;
     width: 5rem;
-    fill: var(--white);
+    fill: $white;
 
     &:hover {
-      fill: var(--white-highlight);
+      fill: $white-highlight;
     }
   }
 }
 
 .email-link {
   font-size: 3rem;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }

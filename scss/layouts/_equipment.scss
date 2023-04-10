@@ -1,0 +1,18 @@
+.eqColumns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.eqColumn {
+  margin: 2rem;
+  flex-basis: 45%;
+}
+
+.eqListItem {
+  list-style: none;
+}
+
+.listHeader {
+  font-size: 3rem;
+}

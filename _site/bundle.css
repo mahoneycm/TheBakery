@@ -1,22 +1,141 @@
-:root {
-  --burgandy: #993930;
-  --burgandy-light: #ad6159;
-  --burgandy-dark: #7a2e26;
-  --teal: #4a9b98;
-  --teal-light: #6eafad;
-  --teal-dark: #3b7c7a;
-  --white: #f6efe9;
-  --white-light: #ffffff;
-  --white-dark: #c5bfba;
-  --white-highlight: #e0c4c1;
-  --grey: #5d5d63;
-  --grey-light: #7d7d82;
-  --grey-dark: #4a4a4f;
-  /*
+@import url("https://fonts.googleapis.com/css2?family=Archivo&family=Archivo+Black&family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/braggadocio");
+/*
   font-family: 'Archivo Black', sans-serif;
-  font-family: 'Open Sans', sans-serif;
   font-family: 'braggadocio-regular', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+a {
+  color: #ffffff;
+  font-family: "Archivo Black", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  color: #993930;
+  font-family: "Archivo Black", sans-serif;
+}
+
+h2 {
+  font-family: "Archivo Black", sans-serif;
+  color: #7a2e26;
+}
+
+.btn {
+  border: none;
+  position: relative;
+  transform: translate(0);
+  top: auto;
+  left: auto;
+  margin: 2.5rem 20%;
+  padding: 1rem;
+  background-color: #993930;
+  border-radius: 1rem;
+  font-size: 3rem;
+}
+.btn:hover {
+  background-color: #7a2e26;
+}
+
+.eqColumns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.eqColumn {
+  margin: 2rem;
+  flex-basis: 45%;
+}
+
+.eqListItem {
+  list-style: none;
+}
+
+.listHeader {
+  font-size: 3rem;
+}
+
+footer {
+  background-color: #4a4a4f;
+  padding-top: 0;
+  font-size: 30rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5rem 0;
+}
+footer p {
+  font-size: 3rem;
+  font-family: "Archivo Black", sans-serif;
+  color: #f6efe9;
+  padding: 3rem 0;
+}
+@media screen and (min-width: 800px) {
+  footer {
+    flex-direction: row;
+    height: 20rem;
+  }
+}
+
+.cake {
+  height: 15rem;
+}
+
+.seal {
+  height: 15rem;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+.socials a {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+}
+.socials-icon {
+  height: 5rem;
+  width: 5rem;
+  fill: #f6efe9;
+}
+.socials-icon:hover {
+  fill: #e0c4c1;
+}
+
+.email-link {
+  font-size: 3rem;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 .header {
@@ -56,7 +175,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--grey-dark);
+  background-color: #4a4a4f;
   z-index: 10;
   transition: transform 1s;
   transform: translateX(105%);
@@ -72,7 +191,7 @@
 }
 .header__nav-items {
   font-family: "Archivo Black", sans-serif;
-  color: var(--white);
+  color: #f6efe9;
   list-style: none;
   font-size: 2rem;
   display: flex;
@@ -90,7 +209,7 @@
 }
 .header__nav-link {
   text-decoration: none;
-  color: var(--white);
+  color: #f6efe9;
   position: relative;
   transition: opacity 0.5s;
 }
@@ -104,116 +223,15 @@
   bottom: -0.5rem;
   width: 100%;
   height: 4px;
-  background-color: var(--teal);
+  background-color: #4a9b98;
   border-radius: 10px 10px 10px 10px;
   transform: scaleX(0);
   transition: all 0.2s;
 }
 
-footer {
-  background-color: var(--grey-dark);
-  padding-top: 0;
-  font-size: 30rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 5rem 0;
-}
-footer p {
-  font-size: 3rem;
-  font-family: "Archivo Black", sans-serif;
-  color: var(--white);
-  padding: 3rem 0;
-}
-@media screen and (min-width: 800px) {
-  footer {
-    flex-direction: row;
-    height: 20rem;
-  }
-}
-
-.cake {
-  height: 15rem;
-}
-
-.seal {
-  height: 15rem;
-  background-color: white;
-  border-radius: 100%;
-}
-
-.socials {
-  display: flex;
-  justify-content: space-between;
-  width: 25rem;
-}
-.socials a {
-  height: 5rem;
-  width: 5rem;
-  display: flex;
-}
-.socials-icon {
-  height: 5rem;
-  width: 5rem;
-  fill: var(--white);
-}
-.socials-icon:hover {
-  fill: var(--white-highlight);
-}
-
-.email-link {
-  font-size: 3rem;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-a {
-  color: var(--white-light);
-  font-family: "Archivo Black", sans-serif;
-}
-
-body {
-  font-size: 1rem;
-  overflow-x: hidden;
-  position: relative;
-}
-
-h1 {
-  color: var(--burgandy);
-  font-family: "Archivo Black", sans-serif;
-}
-
-h2 {
-  font-family: "Archivo Black", sans-serif;
-  color: var(--burgandy-dark);
-}
-
-.hidden {
-  display: none;
-}
-
-.img-wrapper {
-  overflow: hidden;
-}
-
-.rotate {
-  transform: rotate(180deg);
+.opened {
+  transform: translateX(0);
+  transition: transform 1s;
 }
 
 .overlay {
@@ -227,35 +245,12 @@ h2 {
   z-index: 5;
 }
 
-.btn {
-  border: none;
-  position: relative;
-  transform: translate(0);
-  top: auto;
-  left: auto;
-  margin: 2.5rem 20%;
-  padding: 1rem;
-  background-color: var(--burgandy);
-  border-radius: 1rem;
-  font-size: 3rem;
-}
-.btn:hover {
-  background-color: var(--burgandy-dark);
-}
-.section {
-  padding-top: 5rem;
-}
-
-.hero {
-  height: 100vh;
-}
-
 .content {
   z-index: 1;
   display: flex;
   flex-direction: column;
   transition: all 0.5s;
-  background-color: var(--white);
+  background-color: #f6efe9;
 }
 .content__about {
   font-size: 2rem;
@@ -267,7 +262,7 @@ h2 {
 .content__about p {
   margin: auto;
   max-width: 800px;
-  color: var(--burgandy-dark);
+  color: #7a2e26;
   padding: 0 2rem;
 }
 .content__rooms {
@@ -327,28 +322,16 @@ h2 {
   color: rgb(15, 15, 15);
 }
 
-.eqColumns {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.hidden {
+  display: none;
 }
 
-.eqColumn {
-  margin: 2rem;
-  flex-basis: 45%;
+.img-wrapper {
+  overflow: hidden;
 }
 
-.eqListItem {
-  list-style: none;
-}
-
-.listHeader {
-  font-size: 3rem;
-}
-
-.opened {
-  transform: translateX(0);
-  transition: transform 1s;
+.hero {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=bundle.css.map */

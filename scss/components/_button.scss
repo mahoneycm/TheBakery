@@ -1,0 +1,18 @@
+.btn {
+  border: none;
+  position: relative;
+  transform: translate(0);
+  top: auto;
+  left: auto;
+
+  margin: 2.5rem 20%;
+  padding: 1rem;
+  background-color: $burgandy;
+  border-radius: 1rem;
+
+  font-size: 3rem;
+
+  &:hover {
+    background-color: $burgandy-dark;
+  }
+}
