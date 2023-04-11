@@ -37,7 +37,7 @@ hero: "./img/ControlA.jpg"
         />
       </div>
 
-      <div class="content__rooms-title">Studio</div>
+    <div class="content__rooms-title">Studio</div>
     </a>
     <a href="#" class="content__rooms-item">
       <div class="img-wrapper">
