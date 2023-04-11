@@ -1,4 +1,4 @@
-@import "./mixins/respondBreakpoints";
+@import "../abstracts/mixins/respondBreakpoints";
 
 .header {
   position: absolute;
@@ -40,7 +40,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: var(--grey-dark);
+    background-color: $grey-dark;
     z-index: 10;
 
     transition: transform 1s;
@@ -56,7 +56,7 @@
 
     &-items {
       font-family: "Archivo Black", sans-serif;
-      color: var(--white);
+      color: $white;
       list-style: none;
       font-size: 2rem;
 
@@ -76,7 +76,7 @@
 
     &-link {
       text-decoration: none;
-      color: var(--white);
+      color: $white;
       position: relative;
       transition: opacity 0.5s;
 
@@ -93,11 +93,27 @@
         bottom: -0.5rem;
         width: 100%;
         height: 4px;
-        background-color: var(--teal);
+        background-color: $teal;
         border-radius: 10px 10px 10px 10px;
         transform: scaleX(0);
         transition: all 0.2s;
       }
     }
   }
+}
+
+.opened {
+  transform: translateX(0);
+  transition: transform 1s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }
