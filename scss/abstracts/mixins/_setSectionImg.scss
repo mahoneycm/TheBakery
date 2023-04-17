@@ -1,4 +1,5 @@
 @mixin setSectionImage($bgImage) {
+  background: no-repeat center/cover;
   background-image: url($bgImage);
   height: 30vh;
   width: 100%;
