@@ -36,21 +36,39 @@ body {
 
 h1 {
   color: #993930;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "scriptorama-tradeshow-jf", sans-serif;
+  font-size: 5rem;
 }
 
 h2 {
-  font-family: "Archivo Black", sans-serif;
   color: #7a2e26;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+}
+
+p {
+  color: #4a4a4f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 4rem;
+  margin: auto;
+  max-width: 800px;
+  padding: 0 2rem;
+  text-align: center;
 }
 
 .btn {
   border: none;
+  display: block;
+  font-family: "Archivo Black", sans-serif;
+  color: white;
   position: relative;
   transform: translate(0);
   top: auto;
   left: auto;
-  margin: 2.5rem 20%;
+  margin: 0 auto;
   padding: 1rem;
   background-color: #993930;
   border-radius: 1rem;
@@ -245,6 +263,29 @@ footer p {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+.section-img--studioA {
+  background: no-repeat center/cover;
+  background-image: url("../../img/photos/studio-a/wide.jpg");
+  height: 30vh;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .section-img--studioA {
+    height: 50vh;
+  }
+}
+.section-img--studioB {
+  background: no-repeat center/cover;
+  background-image: url("../../img/photos/studio-b/wide.jpg");
+  height: 30vh;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .section-img--studioB {
+    height: 50vh;
+  }
 }
 
 .content {
