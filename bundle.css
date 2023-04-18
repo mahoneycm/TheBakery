@@ -38,13 +38,14 @@ h1 {
   color: #993930;
   font-family: "scriptorama-tradeshow-jf", sans-serif;
   font-size: 5rem;
+  margin-bottom: 3rem;
 }
 
 h2 {
   color: #7a2e26;
   font-family: "Archivo Black", sans-serif;
   font-size: 5rem;
-  text-align: center;
+  margin-bottom: 2rem;
 }
 
 p {
@@ -52,27 +53,23 @@ p {
   font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  line-height: 4rem;
-  margin: auto;
-  max-width: 800px;
-  padding: 0 2rem;
-  text-align: center;
+  line-height: 3.5rem;
+  margin: 0 auto 2rem;
+}
+p:last-child {
+  margin-bottom: 0;
 }
 
 .btn {
-  border: none;
-  display: block;
-  font-family: "Archivo Black", sans-serif;
-  color: white;
-  position: relative;
-  transform: translate(0);
-  top: auto;
-  left: auto;
-  margin: 0 auto;
-  padding: 1rem;
   background-color: #993930;
   border-radius: 1rem;
+  color: white;
+  display: inline-block;
+  font-family: "Archivo Black", sans-serif;
   font-size: 3rem;
+  padding: 1rem 2rem;
+  pointer-events: visiblePainted;
+  text-decoration: none;
 }
 .btn:hover {
   background-color: #7a2e26;
@@ -97,36 +94,65 @@ p {
   font-size: 3rem;
 }
 
-footer {
+.footer--main {
   background-color: #4a4a4f;
-  padding-top: 0;
-  font-size: 30rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding: 5rem 0;
+  padding: 2rem;
+  height: 25rem;
 }
-footer p {
-  font-size: 3rem;
-  font-family: "Archivo Black", sans-serif;
+.footer--main p {
+  font-size: 1.75rem;
   color: #f6efe9;
-  padding: 3rem 0;
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 800px) {
-  footer {
+  .footer--main {
     flex-direction: row;
-    height: 20rem;
+    height: 15rem;
+    justify-content: space-between;
+  }
+}
+.footer--copy {
+  background-color: rgb(48, 48, 48);
+  color: #f6efe9;
+  font-size: 1.5rem;
+  font-family: "open-sans", sans-serif;
+  text-align: center;
+  padding: 0.5rem;
+}
+.footer--links {
+  width: 30rem;
+}
+.footer--links ul {
+  color: #7d7d82;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  list-style: none;
+}
+.footer--links a {
+  color: gray;
+  font-family: "open-sans", sans-serif;
+  font-size: 2rem;
+}
+.footer--contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 800px) {
+  .footer--contact {
+    align-items: flex-end;
   }
 }
 
-.cake {
-  height: 15rem;
-}
-
 .seal {
-  height: 15rem;
+  height: 10rem;
   background-color: white;
   border-radius: 100%;
 }
@@ -288,81 +314,23 @@ footer p {
   }
 }
 
-.content {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.5s;
+body {
   background-color: #f6efe9;
 }
-.content__about {
-  font-size: 2rem;
-  line-height: 4rem;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-}
-.content__about p {
-  margin: auto;
+
+p {
   max-width: 800px;
-  color: #7a2e26;
-  padding: 0 2rem;
 }
-.content__rooms {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.content__rooms-items {
-  display: flex;
-}
-.content__rooms-item {
-  text-decoration: none;
-  position: relative;
-}
-.content__rooms-title {
+
+.section {
+  padding: 3rem 0;
   text-align: center;
-  font-size: 5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
-.content__rooms-img {
-  width: 100%;
-  display: block;
-  filter: brightness(50%);
-  transition: filter 0.4s, transform 0.4s;
+.section:last-of-type {
+  padding-bottom: 5rem;
 }
-.content__rooms-img:hover {
-  filter: brightness(100%);
-  transform: scale(110%);
-}
-@media screen and (min-width: 800px) {
-  .content__rooms {
-    flex-direction: row;
-  }
-  .content__rooms-item:hover {
-    transform: none;
-  }
-  .content__rooms-img {
-    width: 45vw;
-  }
-}
-.content__contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 2rem;
-  line-height: 4rem;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-}
-.content__contact p {
-  margin: auto;
-  max-width: 700px;
-  color: rgb(15, 15, 15);
+.section--alt {
+  background-color: #ffffff;
 }
 
 .hidden {
@@ -375,6 +343,13 @@ footer p {
 
 .hero {
   height: 100vh;
+}
+
+.token {
+  display: flex;
+  height: 7.5rem;
+  width: auto;
+  margin: 3rem auto;
 }
 
 /*# sourceMappingURL=bundle.css.map */
