@@ -16,6 +16,7 @@
       font-size: 1.75rem;
       color: $white;
       padding-top: 1.5rem;
+      line-height: initial;
     }
 
     @include respond(tablet) {
@@ -40,13 +41,21 @@
     ul {
       color: $grey-light;
       display: flex;
-      justify-content: space-evenly;
       font-size: 1rem;
       list-style: none;
     }
 
+    li {
+      border-right: 2px solid $white-dark;
+      padding: 0 1rem;
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
     a {
-      color: gray;
+      color: $white-dark;
       font-family: "open-sans", sans-serif;
       font-size: 2rem;
     }

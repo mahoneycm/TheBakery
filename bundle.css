@@ -109,6 +109,7 @@ p:last-child {
   font-size: 1.75rem;
   color: #f6efe9;
   padding-top: 1.5rem;
+  line-height: initial;
 }
 @media screen and (min-width: 800px) {
   .footer--main {
@@ -131,12 +132,18 @@ p:last-child {
 .footer--links ul {
   color: #7d7d82;
   display: flex;
-  justify-content: space-evenly;
   font-size: 1rem;
   list-style: none;
 }
+.footer--links li {
+  border-right: 2px solid #c5bfba;
+  padding: 0 1rem;
+}
+.footer--links li:last-of-type {
+  border: none;
+}
 .footer--links a {
-  color: gray;
+  color: #c5bfba;
   font-family: "open-sans", sans-serif;
   font-size: 2rem;
 }
