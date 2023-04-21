@@ -4,6 +4,7 @@
   "description": "The Bakery Studios",
   "main": "index.js",
   "scripts": {
+    "build": "esbuild app.jsx --bundle --outfile=out.js",
     "watch:sass": "sass scss/styles.scss bundle.css -w",
     "devserver": "npx @11ty/eleventy --serve",
     "start": "npm-run-all --parallel devserver watch:sass"
