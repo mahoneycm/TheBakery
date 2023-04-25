@@ -126,9 +126,6 @@ p:last-child {
   text-align: center;
   padding: 0.5rem;
 }
-.footer--links {
-  width: 30rem;
-}
 .footer--links ul {
   color: #7d7d82;
   display: flex;
@@ -159,9 +156,7 @@ p:last-child {
 }
 
 .seal {
-  height: 10rem;
-  background-color: white;
-  border-radius: 100%;
+  transition: all 2s cubic-bezier(0.58, -0.59, 0.04, 1.32);
 }
 
 .socials {
@@ -224,7 +219,7 @@ p:last-child {
 }
 .header__nav {
   align-items: center;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
