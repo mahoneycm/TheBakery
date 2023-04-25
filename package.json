@@ -4,10 +4,10 @@
   "description": "The Bakery Studios",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild app.jsx --bundle --outfile=out.js",
+    "build": "esbuild ./js/index --bundle --minify --outfile=index.js",
     "watch:sass": "sass scss/styles.scss bundle.css -w",
     "devserver": "npx @11ty/eleventy --serve",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    "start": "npm-run-all --parallel build devserver watch:sass"
   },
   "repository": {
     "type": "git",
