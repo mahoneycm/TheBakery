@@ -9,6 +9,28 @@
   align-items: center;
   width: 100%;
 
+  @include respond(tablet) {
+    &--sticky {
+      background: linear-gradient(45deg, $burgandy, $burgandy-dark);
+      border-radius: 20px;
+      padding: 1rem;
+      position: fixed;
+      margin: 1rem 1.5rem;
+      width: calc(100% - 3rem);
+      animation: slideIn 0.5s ease-out;
+
+      @keyframes slideIn {
+        from {
+          top: -10%;
+        }
+
+        to {
+          top: 0;
+        }
+      }
+    }
+  }
+
   &__img {
     height: 10rem;
     filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg)
@@ -17,10 +39,14 @@
 
   &__menu-btn {
     border: none;
-    background-color: transparent;
+    border-radius: 50%;
+    background: linear-gradient(45deg, $burgandy, $burgandy-dark);
     cursor: pointer;
-    height: 5rem;
-    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    width: 7rem;
     margin-left: auto;
 
     @include respond(tablet) {
@@ -31,7 +57,7 @@
   &__menu-btn-icon {
     height: 4rem;
     width: 4rem;
-    fill: whitesmoke;
+    fill: $white;
   }
 
   &__nav {
@@ -40,7 +66,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: $grey-dark;
+    background: linear-gradient($burgandy, $burgandy-dark);
     z-index: 10;
 
     transition: transform 1s;
@@ -50,6 +76,7 @@
       display: flex;
       position: relative;
       height: auto;
+      background: none;
       background-color: transparent;
       transform: translateX(0);
     }
