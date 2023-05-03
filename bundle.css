@@ -245,7 +245,7 @@ p:last-child {
   right: 0;
   background: linear-gradient(#993930, #7a2e26);
   z-index: 10;
-  transition: transform 1s;
+  transition: transform 0.5s ease-out;
   transform: translateX(105%);
 }
 @media screen and (min-width: 800px) {
@@ -304,7 +304,7 @@ p:last-child {
 
 .opened {
   transform: translateX(0);
-  transition: transform 1s;
+  transition: transform 0.5s ease-out;
 }
 
 .overlay {

@@ -69,7 +69,7 @@
     background: linear-gradient($burgandy, $burgandy-dark);
     z-index: 10;
 
-    transition: transform 1s;
+    transition: transform 0.5s ease-out;
     transform: translateX(105%);
 
     @include respond(tablet) {
@@ -136,7 +136,7 @@
 
 .opened {
   transform: translateX(0);
-  transition: transform 1s;
+  transition: transform 0.5s ease-out;
 }
 
 .overlay {
