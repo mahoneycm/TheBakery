@@ -50,17 +50,9 @@ NAV.addEventListener("mouseout", listHover(1));
 
 function stickyHeader(entries, observer) {
   entries.forEach((entry) => {
-    console.log(entry);
-
     entry.isIntersecting
       ? HEADER.classList.remove(STICKY)
       : HEADER.classList.add(STICKY);
-
-    // if (!entry.isIntersecting) {
-    //   HEADER.classList.add(STICKY);
-    // } else {
-    //   HEADER.classList.remove(STICKY);
-    // }
   });
 }
 
