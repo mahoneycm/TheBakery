@@ -1,18 +1,10 @@
-.eqColumns {
+.equipment-wrapper {
+  align-content: center;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.eqColumn {
-  margin: 2rem;
-  flex-basis: 45%;
-}
-
-.eqListItem {
-  list-style: none;
-}
-
-.listHeader {
-  font-size: 3rem;
+.equipment-list {
+  width: 45%;
 }
