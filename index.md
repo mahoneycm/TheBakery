@@ -25,13 +25,13 @@ hero: "./img/ControlA.jpg"
 <div class="section">
   <h2>Studio A</h2>
   <p>Our large room with 3 iso booths. Here is some more text about studio one. It’s number one. Not number two. Just like you.</p>
-  <a class="btn" href="#">View Studio A</a>
+  <a class="btn" href="/pages/studio-a/index">View Studio A</a>
 </div>
 <div class="section-img section-img--studioB"></div>
 <div class="section">
   <h2>Studio B</h2>
   <p>Some real nice text about studio two. It’s real nice. Got it? Nice</p>
-  <a class="btn" href="#">View Studio B</a>
+  <a class="btn" href="/pages/studio-b/index">View Studio B</a>
 </div>
 <div class="section section--alt">
   <h2>Recent Artists</h2>
