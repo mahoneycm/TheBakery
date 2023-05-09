@@ -3,18 +3,12 @@ layout: "page-base"
 hero: "./img/ControlA.jpg"
 ---
 
-{% if hero %}
+<style>
+  .hero {
+    height: 100vh;
+  }
+</style>
 
-  <style>
-    .hero {
-      background: #fff url({{ hero }}) no-repeat center center/cover;
-      z-index: -2;
-    }
-  </style>
-
-{% endif %}
-
-<div class="hero"></div>
 <div class="section">
   <h1>Welcome to The Bakery</h1>
   <p>
