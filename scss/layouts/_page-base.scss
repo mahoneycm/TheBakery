@@ -6,6 +6,24 @@ p {
   max-width: 800px;
 }
 
+.hero {
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  z-index: -2;
+}
+
+.hero--badge {
+  height: auto;
+  margin-top: 5rem;
+  width: 35rem;
+
+  @include respond("tablet") {
+    width: 50rem;
+  }
+}
+
 .section {
   padding: 3rem 0;
   text-align: center;
@@ -25,10 +43,6 @@ p {
 
 .img-wrapper {
   overflow: hidden;
-}
-
-.hero {
-  height: 100vh;
 }
 
 .token {
