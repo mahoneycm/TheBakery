@@ -195,16 +195,36 @@ p:last-child {
   align-items: center;
   width: 100%;
 }
+.header--sticky {
+  animation: slideIn 0.5s ease-out;
+  background: linear-gradient(45deg, #993930, #7a2e26);
+  border-radius: 20px;
+  position: fixed;
+  width: calc(100% - 3rem);
+  padding: 1rem;
+  top: 1rem;
+}
+@keyframes slideIn {
+  from {
+    top: -10%;
+  }
+  to {
+    top: 1rem;
+  }
+}
 .header__img {
-  height: 10rem;
+  height: 8rem;
   filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg) brightness(100%) contrast(93%);
 }
 .header__menu-btn {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  height: 5rem;
-  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  width: 7rem;
   margin-left: auto;
 }
 @media screen and (min-width: 800px) {
@@ -215,17 +235,17 @@ p:last-child {
 .header__menu-btn-icon {
   height: 4rem;
   width: 4rem;
-  fill: whitesmoke;
+  fill: #f6efe9;
 }
 .header__nav {
   align-items: center;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  background-color: #4a4a4f;
+  background: linear-gradient(#993930, #7a2e26);
   z-index: 10;
-  transition: transform 1s;
+  transition: transform 0.5s ease-out;
   transform: translateX(105%);
 }
 @media screen and (min-width: 800px) {
@@ -233,6 +253,7 @@ p:last-child {
     display: flex;
     position: relative;
     height: auto;
+    background: none;
     background-color: transparent;
     transform: translateX(0);
   }
@@ -253,7 +274,7 @@ p:last-child {
   }
 }
 .header__nav-item {
-  margin: 3rem;
+  margin: 2.5rem;
 }
 .header__nav-link {
   text-decoration: none;
@@ -276,18 +297,23 @@ p:last-child {
   transform: scaleX(0);
   transition: all 0.2s;
 }
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .opened {
   transform: translateX(0);
-  transition: transform 1s;
+  transition: transform 0.5s ease-out;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 101vh;
+  margin: -1.5rem;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
