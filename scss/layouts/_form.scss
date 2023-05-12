@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input:where(:not([type="submit"])),
+textarea {
+  border: none;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+input:where(:not([type="submit"])) {
+  height: 4rem;
+}
+
+input[type="submit"] {
+  margin-top: 3rem;
+
+  @include respond("tablet") {
+    align-self: center;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  align-self: baseline;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
