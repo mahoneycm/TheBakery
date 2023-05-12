@@ -1,6 +1,10 @@
 form {
   display: flex;
   flex-direction: column;
+
+  @include respond("tablet") {
+    margin-inline: 5rem;
+  }
 }
 
 input:where(:not([type="submit"])),

@@ -129,6 +129,11 @@ form {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 800px) {
+  form {
+    margin-inline: 5rem;
+  }
+}
 
 input:where(:not([type=submit])),
 textarea {
