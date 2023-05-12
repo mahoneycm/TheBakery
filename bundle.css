@@ -100,12 +100,27 @@ li::marker {
 .equipment-wrapper {
   align-content: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+@media screen and (min-width: 800px) {
+  .equipment-wrapper {
+    flex-direction: row;
+  }
 }
 
 .equipment-list {
-  width: 45%;
+  flex-grow: 1;
+  margin: 1.5rem 0;
+  margin-left: 0;
+  width: 80%;
+}
+@media screen and (min-width: 800px) {
+  .equipment-list {
+    width: 25%;
+    margin-left: 10%;
+  }
 }
 
 .footer--main {
@@ -384,7 +399,7 @@ p {
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 3rem;
   text-align: center;
 }
 .section:last-of-type {
