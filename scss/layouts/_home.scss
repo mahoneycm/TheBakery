@@ -1,0 +1,9 @@
+.section-img {
+  &--studioA {
+    @include setSectionImage("../../img/photos/studio-a/wide.jpg");
+  }
+
+  &--studioB {
+    @include setSectionImage("../../img/photos/studio-b/wide.jpg");
+  }
+}
