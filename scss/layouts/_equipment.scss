@@ -1,18 +1,23 @@
-.eqColumns {
+.equipment-wrapper {
+  align-content: center;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+
+  @include respond("tablet") {
+    flex-direction: row;
+  }
 }
 
-.eqColumn {
-  margin: 2rem;
-  flex-basis: 45%;
-}
+.equipment-list {
+  flex-grow: 1;
+  margin: 1.5rem 0;
+  margin-left: 0;
+  width: 80%;
 
-.eqListItem {
-  list-style: none;
-}
-
-.listHeader {
-  font-size: 3rem;
+  @include respond("tablet") {
+    width: 25%;
+    margin-left: 10%;
+  }
 }
