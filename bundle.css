@@ -133,6 +133,13 @@ form {
   form {
     margin-inline: 5rem;
   }
+  form .input-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  form .input-row .input-wrapper {
+    width: 49%;
+  }
 }
 
 input:where(:not([type=submit])),
