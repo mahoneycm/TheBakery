@@ -1,0 +1,55 @@
+.gallery {
+  &__wrapper {
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-inline: auto;
+    max-width: 100rem;
+    height: 50rem;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    background: url("/img/photos/studio-a/console-wide.jpg") no-repeat center
+      center/cover;
+
+    & > * {
+      transition: opacity 0.3s ease-in;
+      opacity: 1;
+
+      @include respond(tablet) {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      & > * {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__carousel {
+    height: 25%;
+    background-color: $white-glass;
+    backdrop-filter: blur(3rem);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+
+    &-img {
+      background: url("/img/photos/studio-a/couch.jpg") no-repeat center
+        center/cover;
+      border-radius: 2rem;
+      cursor: pointer;
+      flex: 0 0 auto;
+      height: auto;
+      margin: 1rem;
+      width: 15rem;
+    }
+  }
+}

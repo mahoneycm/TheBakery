@@ -99,6 +99,51 @@ li::marker {
   background-color: #7a2e26;
 }
 
+.gallery__wrapper {
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-inline: auto;
+  max-width: 100rem;
+  height: 50rem;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: url("/img/photos/studio-a/console-wide.jpg") no-repeat center center/cover;
+}
+.gallery__wrapper > * {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+}
+@media screen and (min-width: 800px) {
+  .gallery__wrapper > * {
+    opacity: 0;
+  }
+}
+.gallery__wrapper:hover > * {
+  opacity: 1;
+}
+.gallery__carousel {
+  height: 25%;
+  background-color: rgba(246, 239, 233, 0.4588235294);
+  backdrop-filter: blur(3rem);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+.gallery__carousel::-webkit-scrollbar {
+  height: 0;
+}
+.gallery__carousel-img {
+  background: url("/img/photos/studio-a/couch.jpg") no-repeat center center/cover;
+  border-radius: 2rem;
+  cursor: pointer;
+  flex: 0 0 auto;
+  height: auto;
+  margin: 1rem;
+  width: 15rem;
+}
+
 .equipment-wrapper {
   align-content: center;
   display: flex;
