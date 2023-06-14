@@ -1,0 +1,22 @@
+
+<div class="gallery__wrapper">
+  <div class="gallery__carousel">
+    {% if studio-a %}
+      {% for img in collections.studio-a-img %}
+        <img
+          src="/{{img}}"
+          alt=""
+          class="gallery__carousel-img"
+        />
+      {% endfor %}
+    {% else %}
+      {% for img in collections.studio-b-img %}
+        <img
+          src="/{{img}}"
+          alt=""
+          class="gallery__carousel-img"
+        />
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
