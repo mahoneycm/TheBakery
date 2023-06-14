@@ -135,7 +135,6 @@ li::marker {
   height: 0;
 }
 .gallery__carousel-img {
-  background: url("/img/photos/studio-a/couch.jpg") no-repeat center center/cover;
   border-radius: 2rem;
   cursor: pointer;
   flex: 0 0 auto;
