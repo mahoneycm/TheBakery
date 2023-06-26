@@ -1,22 +1,20 @@
 
+
+<style>
+  .gallery__wrapper {
+    background: url({{ galleryBg }}) no-repeat center
+      center/cover;
+    }
+</style>
+
 <div class="gallery__wrapper">
   <div class="gallery__carousel">
-    {% if studio-a %}
-      {% for img in collections.studio-a-img %}
-        <img
-          src="/{{img}}"
-          alt=""
-          class="gallery__carousel-img"
-        />
-      {% endfor %}
-    {% else %}
-      {% for img in collections.studio-b-img %}
-        <img
-          src="/{{img}}"
-          alt=""
-          class="gallery__carousel-img"
-        />
-      {% endfor %}
-    {% endif %}
+    {% for galleryItem in galleryData %}
+      <img
+        src="/{{galleryItem.img}}"
+        alt="{{galleryItem.alt}}"
+        class="gallery__carousel-img"
+      />
+    {% endfor %}
   </div>
 </div>

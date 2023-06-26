@@ -109,7 +109,6 @@ li::marker {
   height: 50rem;
   justify-content: flex-end;
   overflow: hidden;
-  background: url("/img/photos/studio-a/console-wide.jpg") no-repeat center center/cover;
 }
 .gallery__wrapper > * {
   transition: opacity 0.3s ease-in;
