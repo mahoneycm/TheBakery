@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 12rem;
     margin-inline: auto;
     max-width: 100rem;
     position: relative;
     height: 50rem;
     justify-content: flex-end;
-    
+
     @include respond("desktop") {
       margin-bottom: auto;
       overflow: hidden;
@@ -60,6 +60,11 @@
       height: auto;
       margin: 1rem;
       width: 15rem;
+      opacity: 0.6;
+
+      &--selected {
+        opacity: 1;
+      }
     }
   }
 }
