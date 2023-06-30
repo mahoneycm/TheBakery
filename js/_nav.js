@@ -4,7 +4,7 @@ const MENU_BUTTON = document.querySelector(".header__menu-btn");
 const NAV = document.querySelector(".header__nav");
 const OVERLAY = document.querySelector(".overlay");
 const STICKY = "header--sticky";
-const CAROUSEL = document.querySelector(".gallery__carousel");
+const CAROUSEL_WRAPPER = document.querySelector(".gallery__carousel-wrapper");
 
 let navOpen = false;
 
@@ -24,7 +24,7 @@ function closeNav() {
   OVERLAY.classList.add("hidden");
 
   // Return backdrop filter to image carousel
-  CAROUSEL.style.backdropFilter = "blur(3rem)";
+  CAROUSEL_WRAPPER.style.backdropFilter = "blur(3rem)";
 
   navOpen = false;
 }
