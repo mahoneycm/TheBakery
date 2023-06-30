@@ -107,7 +107,7 @@ li::marker {
 }
 .gallery__button {
   background-color: transparent;
-  padding: 0;
+  padding-inline: 1rem;
   width: 3rem;
 }
 .gallery__button:hover {
@@ -224,7 +224,7 @@ form {
   }
 }
 
-input:where(:not([type=submit])),
+input:where(:not([type="submit"])),
 textarea {
   border: none;
   border-radius: 5px;
@@ -233,15 +233,15 @@ textarea {
   padding: 1rem;
 }
 
-input:where(:not([type=submit])) {
+input:where(:not([type="submit"])) {
   height: 4rem;
 }
 
-input[type=submit] {
+input[type="submit"] {
   margin-top: 3rem;
 }
 @media screen and (min-width: 800px) {
-  input[type=submit] {
+  input[type="submit"] {
     align-self: center;
   }
 }
@@ -386,7 +386,8 @@ label {
 }
 .header__img {
   height: 8rem;
-  filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg) brightness(100%) contrast(93%);
+  filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg)
+    brightness(100%) contrast(93%);
 }
 .header__menu-btn {
   border: none;

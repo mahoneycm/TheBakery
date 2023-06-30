@@ -16,6 +16,7 @@ const selectPhoto = (event) => {
 
   selectedImg.classList.remove(SELECTED_CLASSNAME);
   target.classList.add(SELECTED_CLASSNAME);
+  target.scrollIntoView({ behavior: "smooth" });
   GALLERY.style.background = `url(${img}) no-repeat center
       center/cover`;
 };
