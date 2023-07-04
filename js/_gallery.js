@@ -6,6 +6,9 @@ const SELECTED_CLASSNAME = `${IMG_CLASSNAME}--selected`;
 const GALLERY = document.querySelector(`.${GALLERY_CLASSNAME}`);
 const CAROUSEL = document.querySelector(`.${CAROUSEL_CLASSNAME}`);
 const THUMBNAILS = document.querySelectorAll(`.${IMG_CLASSNAME}`);
+const LAST_IMG_INDEX = THUMBNAILS.length;
+const FIRST_IMG = THUMBNAILS[0];
+const LAST_IMG = THUMBNAILS[LAST_IMG_INDEX - 1];
 const BUTTON_PREV = document.querySelector(`.${BUTTON_CLASSNAME}--prev`);
 const BUTTON_NEXT = document.querySelector(`.${BUTTON_CLASSNAME}--next`);
 
@@ -25,14 +28,14 @@ const prevImg = () => {
   const selectedImg = document.querySelector(`.${SELECTED_CLASSNAME}`);
   const prevImg = selectedImg.previousElementSibling;
 
-  if (prevImg) prevImg.click();
+  prevImg ? prevImg.click() : LAST_IMG.click();
 };
 
 const nextImg = () => {
   const selectedImg = document.querySelector(`.${SELECTED_CLASSNAME}`);
   const nextImg = selectedImg.nextElementSibling;
 
-  if (nextImg) nextImg.click();
+  nextImg ? nextImg.click() : FIRST_IMG.click();
 };
 
 BUTTON_PREV.addEventListener("click", prevImg);
@@ -43,7 +46,7 @@ THUMBNAILS.forEach((thumbnail) => {
 });
 
 const init = () => {
-  THUMBNAILS[0].classList.add(SELECTED_CLASSNAME);
+  FIRST_IMG.classList.add(SELECTED_CLASSNAME);
 };
 
 init();
