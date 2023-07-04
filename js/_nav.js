@@ -4,6 +4,7 @@ const MENU_BUTTON = document.querySelector(".header__menu-btn");
 const NAV = document.querySelector(".header__nav");
 const OVERLAY = document.querySelector(".overlay");
 const STICKY = "header--sticky";
+const CAROUSEL_WRAPPER = document.querySelector(".gallery__carousel-wrapper");
 
 let navOpen = false;
 
@@ -11,6 +12,9 @@ MENU_BUTTON.addEventListener("click", function () {
   MENU_BUTTON.classList.toggle("hidden");
   NAV.classList.toggle("opened");
   OVERLAY.classList.toggle("hidden");
+
+  // Remove backdrop filter from image carousel to fix nav stacking bug
+  CAROUSEL.style.backdropFilter = "none";
   navOpen = !navOpen;
 });
 
@@ -18,6 +22,9 @@ function closeNav() {
   NAV.classList.remove("opened");
   MENU_BUTTON.classList.remove("hidden");
   OVERLAY.classList.add("hidden");
+
+  // Return backdrop filter to image carousel
+  CAROUSEL_WRAPPER.style.backdropFilter = "blur(3rem)";
 
   navOpen = false;
 }

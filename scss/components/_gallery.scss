@@ -1,0 +1,75 @@
+.gallery {
+  &__button {
+    background-color: transparent;
+    padding: 1rem;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &__wrapper {
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 12rem;
+    margin-inline: auto;
+    max-width: 100rem;
+    height: 50rem;
+    justify-content: flex-end;
+
+    @include respond("desktop") {
+      margin-bottom: auto;
+    }
+
+    & > * {
+      transition: opacity 0.3s ease-in;
+      opacity: 1;
+
+      @include respond(desktop) {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      & > * {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__carousel {
+    display: flex;
+    overflow: auto;
+
+    &-wrapper {
+      background-color: $burgandy-dark;
+      border-radius: 2rem;
+      bottom: -27%;
+      display: flex;
+      height: 25%;
+      justify-content: space-between;
+      position: relative;
+
+      @include respond(desktop) {
+        background-color: $white-glass;
+        backdrop-filter: blur(3rem);
+        position: initial;
+      }
+    }
+
+    &-img {
+      border-radius: 2rem;
+      cursor: pointer;
+      flex: 0 0 auto;
+      margin: 1rem;
+      width: 15rem;
+      opacity: 0.6;
+
+      &--selected {
+        opacity: 1;
+      }
+    }
+  }
+}
