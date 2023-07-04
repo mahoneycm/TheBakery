@@ -1,15 +1,7 @@
 .gallery {
-  &__buttons {
-    bottom: 20%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-  }
-
   &__button {
     background-color: transparent;
     padding: 1rem;
-    width: 3rem;
 
     &:hover {
       background-color: transparent;
@@ -24,13 +16,11 @@
     margin-bottom: 12rem;
     margin-inline: auto;
     max-width: 100rem;
-    position: relative;
     height: 50rem;
     justify-content: flex-end;
 
     @include respond("desktop") {
       margin-bottom: auto;
-      overflow: hidden;
     }
 
     & > * {
@@ -51,19 +41,7 @@
 
   &__carousel {
     display: flex;
-    flex-wrap: nowrap;
     overflow: auto;
-
-    // @include respond(desktop) {
-    //   background-color: $white-glass;
-    //   backdrop-filter: blur(3rem);
-    //   position: initial;
-    //   bottom: 0;
-    // }
-
-    &::-webkit-scrollbar {
-      height: 0;
-    }
 
     &-wrapper {
       background-color: $burgandy-dark;
@@ -78,7 +56,6 @@
         background-color: $white-glass;
         backdrop-filter: blur(3rem);
         position: initial;
-        bottom: 0;
       }
     }
 
@@ -86,7 +63,6 @@
       border-radius: 2rem;
       cursor: pointer;
       flex: 0 0 auto;
-      height: auto;
       margin: 1rem;
       width: 15rem;
       opacity: 0.6;
