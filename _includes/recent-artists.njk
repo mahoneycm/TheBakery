@@ -1,0 +1,7 @@
+<ul class="recent-artists">
+  {% for artist in artists %}
+    <li class="recent-artists--tile">
+      <img src="{{artist.img}}" alt="{{artist.alt}}">
+    </li>
+  {% endfor %}
+</ul>
