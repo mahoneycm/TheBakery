@@ -1,6 +1,31 @@
 ---
 layout: "page-base"
 hero: "./img/ControlA.jpg"
+artists:
+  - img: "/img/artists/DangerousSummer.jpeg"
+    alt: "The Dangerous Summer - All that is left of the blue sky"
+  - img: "/img/artists/Turnstile.jpeg"
+    alt: "Turnstile - Nonstop Feeling"
+  - img: "/img/artists/WildTruth.jpeg"
+    alt: "Wild Truth - Drift"
+  - img: "/img/artists/FlightClub.jpeg"
+    alt: "Flight Club - Until the sun drowns"
+  - img: "/img/artists/HouseHome.jpeg"
+    alt: "House & Home - Find Sense. Feel Love. Make Light."
+  - img: "/img/artists/Dryjacket.jpeg"
+    alt: "Dryjacket - Lights, Locks, & Faucets"
+  - img: "/img/artists/Bodythief.jpg"
+    alt: "Bodythief - Innerverse"
+  - img: "/img/artists/DeadFriends.jpeg"
+    alt: "Dead Friends - High Wasted Genes"
+  - img: "/img/artists/Toothgrinder.jpg"
+    alt: "Toothgrinder - Phantom Amour"
+  - img: "/img/artists/AskingAlexandria.jpg"
+    alt: "Asking Alexandria - Into the fire"
+  - img: "/img/artists/Emarosa.jpg"
+    alt: "Emarosa - Versus"
+  - img: "/img/artists/FlightClub.jpeg"
+    alt: "Filler"
 ---
 
 <style>
@@ -38,7 +63,7 @@ hero: "./img/ControlA.jpg"
 </div>
 <div class="section section--alt">
   <h2>Recent Artists</h2>
-  <div class="grid"></div>
+  {% include "recent-artists.njk" %}
 </div>
 <div class="section">
   <p>Let's make music</p>

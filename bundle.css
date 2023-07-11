@@ -166,6 +166,27 @@ li::marker {
   opacity: 1;
 }
 
+.recent-artists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.recent-artists--tile {
+  background-color: #4a9b98;
+  display: block;
+  list-style: none;
+  width: 31%;
+}
+@media screen and (min-width: 800px) {
+  .recent-artists--tile {
+    width: 20%;
+  }
+}
+.recent-artists--tile img {
+  width: 100%;
+}
+
 .equipment-wrapper {
   align-content: center;
   display: flex;
@@ -527,7 +548,7 @@ p {
 }
 
 .section {
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
 }
 .section:last-of-type {
