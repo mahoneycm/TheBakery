@@ -166,24 +166,24 @@ li::marker {
   opacity: 1;
 }
 
-.recent-artists {
+.selected-artists {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
-.recent-artists--tile {
+.selected-artists--tile {
   background-color: #4a9b98;
   display: block;
   list-style: none;
   width: 31%;
 }
 @media screen and (min-width: 800px) {
-  .recent-artists--tile {
+  .selected-artists--tile {
     width: 20%;
   }
 }
-.recent-artists--tile img {
+.selected-artists--tile img {
   width: 100%;
   aspect-ratio: 1/1;
 }
