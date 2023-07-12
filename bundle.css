@@ -166,24 +166,24 @@ li::marker {
   opacity: 1;
 }
 
-.selected-artists {
+.discography {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
-.selected-artists--tile {
+.discography--tile {
   background-color: #4a9b98;
   display: block;
   list-style: none;
   width: 31%;
 }
 @media screen and (min-width: 800px) {
-  .selected-artists--tile {
+  .discography--tile {
     width: 20%;
   }
 }
-.selected-artists--tile img {
+.discography--tile img {
   width: 100%;
   aspect-ratio: 1/1;
 }
