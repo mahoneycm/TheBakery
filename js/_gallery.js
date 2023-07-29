@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-expressions */
 const GALLERY_CLASSNAME = "gallery__wrapper";
 const CAROUSEL_CLASSNAME = "gallery__carousel";
 const BUTTON_CLASSNAME = "gallery__button";
 const IMG_CLASSNAME = `${CAROUSEL_CLASSNAME}-img`;
 const SELECTED_CLASSNAME = `${IMG_CLASSNAME}--selected`;
 const GALLERY = document.querySelector(`.${GALLERY_CLASSNAME}`);
-const CAROUSEL = document.querySelector(`.${CAROUSEL_CLASSNAME}`);
 const THUMBNAILS = document.querySelectorAll(`.${IMG_CLASSNAME}`);
 const LAST_IMG_INDEX = THUMBNAILS.length;
 const FIRST_IMG = THUMBNAILS[0];
@@ -24,22 +24,22 @@ const selectPhoto = (event) => {
       center/cover`;
 };
 
-const prevImg = () => {
+const selectPrevImg = () => {
   const selectedImg = document.querySelector(`.${SELECTED_CLASSNAME}`);
   const prevImg = selectedImg.previousElementSibling;
 
   prevImg ? prevImg.click() : LAST_IMG.click();
 };
 
-const nextImg = () => {
+const selectNextImg = () => {
   const selectedImg = document.querySelector(`.${SELECTED_CLASSNAME}`);
   const nextImg = selectedImg.nextElementSibling;
 
   nextImg ? nextImg.click() : FIRST_IMG.click();
 };
 
-BUTTON_PREV.addEventListener("click", prevImg);
-BUTTON_NEXT.addEventListener("click", nextImg);
+BUTTON_PREV.addEventListener("click", selectPrevImg);
+BUTTON_NEXT.addEventListener("click", selectNextImg);
 
 THUMBNAILS.forEach((thumbnail) => {
   thumbnail.addEventListener("click", selectPhoto);

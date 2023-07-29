@@ -16,13 +16,13 @@ MENU_BUTTON.addEventListener("click", () => {
   navOpen = !navOpen;
 });
 
-function closeNav() {
+const closeNav = () => {
   NAV.classList.remove("opened");
   MENU_BUTTON.classList.remove("hidden");
   OVERLAY.classList.add("hidden");
 
   navOpen = false;
-}
+};
 
 OVERLAY.addEventListener("click", closeNav);
 
@@ -46,18 +46,18 @@ function listHover(o) {
       });
     }
   };
-}
+};
 
 NAV.addEventListener("mouseover", listHover(0.5));
 NAV.addEventListener("mouseout", listHover(1));
 
-function stickyHeader(entries) {
+const stickyHeader = (entries) => {
   entries.forEach((entry) => {
     entry.isIntersecting
       ? HEADER.classList.remove(STICKY)
       : HEADER.classList.add(STICKY);
   });
-}
+};
 
 const heroObserver = new IntersectionObserver(stickyHeader, {
   root: null,
