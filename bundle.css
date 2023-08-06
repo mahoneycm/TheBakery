@@ -89,7 +89,7 @@ li::marker {
   flex-wrap: wrap;
   justify-content: center;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .list-wrapper {
     flex-direction: row;
   }
@@ -101,7 +101,7 @@ li::marker {
   margin-left: 0;
   width: 80%;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .list {
     width: 25%;
     margin-left: 10%;
@@ -204,7 +204,7 @@ li::marker {
   list-style: none;
   width: 31%;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .discography--tile {
     width: 20%;
   }
@@ -218,7 +218,7 @@ form {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   form {
     margin-inline: 5rem;
   }
@@ -247,7 +247,7 @@ input:where(:not([type=submit])) {
 input[type=submit] {
   margin-top: 3rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   input[type=submit] {
     align-self: center;
   }
@@ -289,7 +289,7 @@ label {
   padding-top: 1.5rem;
   line-height: initial;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .footer--main {
     flex-direction: row;
     height: 15rem;
@@ -327,7 +327,7 @@ label {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .footer--contact {
     align-items: flex-end;
   }
@@ -406,7 +406,7 @@ label {
   width: 7rem;
   margin-left: auto;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .header__menu-btn {
     display: none;
   }
@@ -427,7 +427,7 @@ label {
   transition: transform 0.5s ease-out;
   transform: translateX(105%);
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .header__nav {
     display: flex;
     position: relative;
@@ -445,7 +445,7 @@ label {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .header__nav-items {
     display: flex;
     flex-direction: row;
@@ -542,7 +542,7 @@ p {
   margin-top: 5rem;
   width: 35rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 970px) {
   .hero--badge {
     width: 50rem;
   }

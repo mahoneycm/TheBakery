@@ -1,6 +1,6 @@
 @mixin respond($bp) {
   @if $bp == tablet {
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 970px) {
       @content;
     }
   } @else if $bp == desktop {
