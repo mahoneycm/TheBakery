@@ -38,15 +38,17 @@ const selectNextImg = () => {
   nextImg ? nextImg.click() : FIRST_IMG.click();
 };
 
-BUTTON_PREV.addEventListener("click", selectPrevImg);
-BUTTON_NEXT.addEventListener("click", selectNextImg);
-
-THUMBNAILS.forEach((thumbnail) => {
-  thumbnail.addEventListener("click", selectPhoto);
-});
-
 const init = () => {
   FIRST_IMG.classList.add(SELECTED_CLASSNAME);
+
+  BUTTON_PREV.addEventListener("click", selectPrevImg);
+  BUTTON_NEXT.addEventListener("click", selectNextImg);
+
+  THUMBNAILS.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", selectPhoto);
+  });
 };
 
-init();
+if (GALLERY) {
+  init();
+}
