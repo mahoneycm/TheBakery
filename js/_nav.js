@@ -33,6 +33,7 @@ window.onscroll = () => {
 };
 
 function listHover(o) {
+  // eslint-disable-next-line func-names
   return function (e) {
     if (e.target.classList.contains("header__nav-link")) {
       const link = e.target;
@@ -46,7 +47,7 @@ function listHover(o) {
       });
     }
   };
-};
+}
 
 NAV.addEventListener("mouseover", listHover(0.5));
 NAV.addEventListener("mouseout", listHover(1));
