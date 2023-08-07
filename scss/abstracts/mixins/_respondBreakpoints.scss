@@ -1,5 +1,9 @@
 @mixin respond($bp) {
-  @if $bp == tablet {
+  @if $bp == mobile {
+    @media screen and (min-width: 450px) {
+      @content;
+    }
+  } @else if $bp == tablet {
     @media screen and (min-width: 970px) {
       @content;
     }

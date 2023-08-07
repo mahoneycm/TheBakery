@@ -8,8 +8,12 @@ h1 {
 h2 {
   color: $burgandy-dark;
   font-family: "Archivo Black", sans-serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
+
+  @include respond(tablet) {
+    font-size: 5rem;
+  }
 }
 
 h3 {
