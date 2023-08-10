@@ -93,6 +93,8 @@ li::marker {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 150rem;
+  margin-inline: auto;
 }
 @media screen and (min-width: 970px) {
   .list-wrapper {
