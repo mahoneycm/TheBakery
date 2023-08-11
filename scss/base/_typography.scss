@@ -57,6 +57,8 @@ li {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 150rem;
+  margin-inline: auto;
 
   @include respond("tablet") {
     flex-direction: row;
