@@ -2,24 +2,23 @@
 
 .footer {
   &--main {
+    align-items: center;
     background-color: $grey-dark;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    text-align: center;
     padding: 5rem 0;
     padding: 2rem;
-    height: 25rem;
 
     p {
-      font-size: 1.75rem;
       color: $white;
-      padding-top: 1.5rem;
+      font-size: 1.5rem;
       line-height: initial;
+      padding-top: 2rem;
     }
 
-    @include respond(tablet) {
+    @include respond(desktop) {
       flex-direction: row;
       height: 15rem;
       justify-content: space-between;
@@ -36,26 +35,43 @@
   }
 
   &--links {
+    margin-bottom: 2rem;
+
+    @include respond(desktop) {
+      margin-bottom: 0;
+    }
+
     ul {
+      align-items: center;
       color: $grey-light;
       display: flex;
+      flex-direction: column;
       font-size: 1rem;
+      justify-content: center;
       list-style: none;
+
+      @include respond(mobile) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
     }
 
     li {
-      border-right: 2px solid $white-dark;
       padding: 0 1rem;
-
-      &:last-of-type {
-        border: none;
-      }
     }
 
     a {
       color: $white-dark;
-      font-family: "open-sans", sans-serif;
-      font-size: 2rem;
+      font-size: 1.75rem;
+      text-decoration: none;
+
+      @include respond(desktop) {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        color: $white;
+      }
     }
   }
 
@@ -64,16 +80,13 @@
     flex-direction: column;
     align-items: center;
 
-    @include respond(tablet) {
+    @include respond(desktop) {
       align-items: flex-end;
     }
   }
 }
 
 .seal {
-  // height: 10rem;
-  // background-color: white;
-  // border-radius: 100%;
   transition: all 2s cubic-bezier(0.58, -0.59, 0.04, 1.32);
 }
 
