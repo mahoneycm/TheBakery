@@ -106,7 +106,12 @@ li::marker {
   flex-grow: 1;
   margin: 1.5rem 0;
   margin-left: 0;
-  width: 80%;
+  width: 90%;
+}
+@media screen and (min-width: 450px) {
+  .list {
+    width: 70%;
+  }
 }
 @media screen and (min-width: 970px) {
   .list {
@@ -509,27 +514,14 @@ label {
   z-index: 5;
 }
 
-.section-img--studioA {
-  background: no-repeat center/cover;
-  background-image: url("../../img/photos/studio-a/3-wide.jpg");
-  height: 30vh;
+.section-img {
+  overflow: hidden;
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
-  .section-img--studioA {
-    height: 50vh;
-  }
-}
-.section-img--studioB {
-  background: no-repeat center/cover;
-  background-image: url("../../img/photos/studio-b/wide.jpg");
-  height: 30vh;
+.section-img img {
+  max-height: 50vh;
+  object-fit: cover;
   width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .section-img--studioB {
-    height: 50vh;
-  }
 }
 
 body {
