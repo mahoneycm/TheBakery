@@ -11,5 +11,9 @@
     @media screen and (min-width: 1024px) {
       @content;
     }
+  } @else if $bp == widescreen {
+    @media screen and (min-width: 1400px) {
+      @content;
+    }
   }
 }
