@@ -68,7 +68,6 @@ li {
 .list {
   flex-grow: 1;
   margin: 1.5rem 0;
-  margin-left: 0;
   width: 90%;
 
   @include respond("mobile") {

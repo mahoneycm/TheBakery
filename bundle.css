@@ -105,7 +105,6 @@ li::marker {
 .list {
   flex-grow: 1;
   margin: 1.5rem 0;
-  margin-left: 0;
   width: 90%;
 }
 @media screen and (min-width: 450px) {
