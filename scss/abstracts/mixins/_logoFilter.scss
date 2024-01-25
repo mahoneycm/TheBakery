@@ -1,0 +1,4 @@
+@mixin logoFilter {
+  filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg)
+    brightness(100%) contrast(93%);
+}

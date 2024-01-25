@@ -71,9 +71,7 @@
 }
 
 .seal {
-  // height: 10rem;
-  // background-color: white;
-  // border-radius: 100%;
+  @include logoFilter;
   transition: all 2s cubic-bezier(0.58, -0.59, 0.04, 1.32);
 }
 
@@ -97,10 +95,6 @@
       fill: $white-highlight;
     }
   }
-}
-
-.email-link {
-  font-size: 3rem;
 }
 
 .rotate {

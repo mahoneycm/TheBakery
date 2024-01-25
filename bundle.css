@@ -345,6 +345,7 @@ label {
 }
 
 .seal {
+  filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg) brightness(100%) contrast(93%);
   transition: all 2s cubic-bezier(0.58, -0.59, 0.04, 1.32);
 }
 
@@ -365,10 +366,6 @@ label {
 }
 .socials-icon:hover {
   fill: #e0c4c1;
-}
-
-.email-link {
-  font-size: 3rem;
 }
 
 .rotate {
@@ -403,8 +400,8 @@ label {
   }
 }
 .header__img {
-  height: 5rem;
   filter: invert(99%) sepia(11%) saturate(1143%) hue-rotate(296deg) brightness(100%) contrast(93%);
+  height: 5rem;
 }
 @media screen and (min-width: 450px) {
   .header__img {
