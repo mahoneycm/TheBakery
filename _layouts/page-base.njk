@@ -26,7 +26,7 @@ title: The Bakery
   {% include "./header.njk" %}
   <div class="hero">
     {% if badge%}
-      <img class="hero--badge" src=" {{ badge }}"></img>
+      <img class="hero--badge" src=" {{ badge }}" alt="{{ badgeAlt }}"></img>
     {% endif %}
   </div>
   {{ content | safe }}
