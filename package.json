@@ -6,7 +6,7 @@
   "scripts": {
     "build": "esbuild ./js/index --bundle --minify --outfile=index.js --watch",
     "build:site": "npx @11ty/eleventy",
-    "watch:sass": "sass scss/styles.scss bundle.css -w",
+    "watch:sass": "sass scss/styles.scss bundle.css -w --style compressed",
     "devserver": "npx @11ty/eleventy --serve",
     "start": "npm-run-all --parallel build devserver watch:sass",
     "lint:js": "npx eslint js/*.js",
