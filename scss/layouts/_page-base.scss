@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  max-width: 800px;
+  max-width: $content-max-width;
 }
 
 .hero {
