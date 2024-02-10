@@ -1,0 +1,7 @@
+<ul class="discography">
+  {% for artist in artists %}
+    <li class="discography--tile">
+      <img src="{{artist.img}}" alt="{{artist.alt}}" loading="lazy">
+    </li>
+  {% endfor %}
+</ul>

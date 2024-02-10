@@ -1,9 +1,10 @@
 .section-img {
-  &--studioA {
-    @include setSectionImage("../../img/photos/studio-a/wide.jpg");
-  }
+  overflow: hidden;
+  width: 100%;
 
-  &--studioB {
-    @include setSectionImage("../../img/photos/studio-b/wide.jpg");
+  img {
+    max-height: 50vh;
+    object-fit: cover;
+    width: 100%;
   }
 }

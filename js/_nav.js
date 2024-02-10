@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 const HEADER = document.querySelector(".header");
 const HERO = document.querySelector(".hero");
 const MENU_BUTTON = document.querySelector(".header__menu-btn");
@@ -7,30 +8,32 @@ const STICKY = "header--sticky";
 
 let navOpen = false;
 
-MENU_BUTTON.addEventListener("click", function () {
+MENU_BUTTON.addEventListener("click", () => {
   MENU_BUTTON.classList.toggle("hidden");
   NAV.classList.toggle("opened");
   OVERLAY.classList.toggle("hidden");
+
   navOpen = !navOpen;
 });
 
-function closeNav() {
+const closeNav = () => {
   NAV.classList.remove("opened");
   MENU_BUTTON.classList.remove("hidden");
   OVERLAY.classList.add("hidden");
 
   navOpen = false;
-}
+};
 
 OVERLAY.addEventListener("click", closeNav);
 
-window.onscroll = function (e) {
+window.onscroll = () => {
   if (navOpen) {
     closeNav();
   }
 };
 
 function listHover(o) {
+  // eslint-disable-next-line func-names
   return function (e) {
     if (e.target.classList.contains("header__nav-link")) {
       const link = e.target;
@@ -39,7 +42,8 @@ function listHover(o) {
         .querySelectorAll(".header__nav-link");
 
       siblings.forEach((el) => {
-        if (el !== link) el.style.opacity = o;
+        const sibling = el;
+        if (sibling !== link) sibling.style.opacity = o;
       });
     }
   };
@@ -48,13 +52,13 @@ function listHover(o) {
 NAV.addEventListener("mouseover", listHover(0.5));
 NAV.addEventListener("mouseout", listHover(1));
 
-function stickyHeader(entries, observer) {
+const stickyHeader = (entries) => {
   entries.forEach((entry) => {
     entry.isIntersecting
       ? HEADER.classList.remove(STICKY)
       : HEADER.classList.add(STICKY);
   });
-}
+};
 
 const heroObserver = new IntersectionObserver(stickyHeader, {
   root: null,

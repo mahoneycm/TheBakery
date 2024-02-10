@@ -8,8 +8,12 @@ h1 {
 h2 {
   color: $burgandy-dark;
   font-family: "Archivo Black", sans-serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
+
+  @include respond(tablet) {
+    font-size: 5rem;
+  }
 }
 
 h3 {
@@ -45,4 +49,39 @@ li {
   &::marker {
     color: $burgandy-light;
   }
+}
+
+.list-wrapper {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 150rem;
+  margin-inline: auto;
+
+  @include respond("tablet") {
+    flex-direction: row;
+  }
+}
+
+.list {
+  flex-grow: 1;
+  margin: 1.5rem 0;
+  width: 90%;
+
+  @include respond("mobile") {
+    width: 70%;
+  }
+
+  @include respond("tablet") {
+    width: 25%;
+    margin-left: 10%;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -999em;
+  right: auto;
 }

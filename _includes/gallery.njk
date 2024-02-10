@@ -1,0 +1,23 @@
+<style>
+  .gallery__wrapper {
+    background: url({{ galleryData[0].img }}) no-repeat center
+      center/cover;
+    }
+</style>
+
+<div class="gallery__wrapper">
+  <div class="gallery__carousel-wrapper">
+    <button class="btn gallery__button gallery__button--prev">&#10092;</button>
+    <div class="gallery__carousel">
+      {% for galleryItem in galleryData %}
+        <img
+          src="{{galleryItem.img}}" 
+          alt="{{galleryItem.alt}}"
+          class="gallery__carousel-img"
+          loading="lazy"
+        />
+      {% endfor %}
+    </div>
+    <button class="btn gallery__button gallery__button--next">&#10093;</button>
+  </div>
+</div>

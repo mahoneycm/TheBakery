@@ -1,6 +1,31 @@
 ---
 layout: "page-base"
-hero: "./img/ControlA.jpg"
+hero: "./img/ControlA.webp"
+artists:
+  - img: "/img/artists/DangerousSummer.jpeg"
+    alt: "The Dangerous Summer - All that is left of the blue sky"
+  - img: "/img/artists/Turnstile.png"
+    alt: "Turnstile - Nonstop Feeling"
+  - img: "/img/artists/WildTruth.jpeg"
+    alt: "Wild Truth - Drift"
+  - img: "/img/artists/FlightClub.jpeg"
+    alt: "Flight Club - Until the sun drowns"
+  - img: "/img/artists/HouseHome.jpeg"
+    alt: "House & Home - Find Sense. Feel Love. Make Light."
+  - img: "/img/artists/Dryjacket.jpeg"
+    alt: "Dryjacket - Lights, Locks, & Faucets"
+  - img: "/img/artists/Bodythief.jpeg"
+    alt: "Bodythief - Innerverse"
+  - img: "/img/artists/DeadFriends.jpeg"
+    alt: "Dead Friends - High Wasted Genes"
+  - img: "/img/artists/Toothgrinder.jpg"
+    alt: "Toothgrinder - Phantom Amour"
+  - img: "/img/artists/AskingAlexandria.jpg"
+    alt: "Asking Alexandria - Into the fire"
+  - img: "/img/artists/Emarosa.jpg"
+    alt: "Emarosa - Versus"
+  - img: "/img/artists/Handguns.jpeg"
+    alt: "Handguns - Life Lessons"
 ---
 
 <style>
@@ -12,33 +37,49 @@ hero: "./img/ControlA.jpg"
 <div class="section">
   <h1>Welcome to The Bakery</h1>
   <p>
-    Located in the blooming Scotts Addition neighborhood of Richmond, Virginia,
-    The Bakery is within minutes of all the city has to offer. This tasty
-    cornerstone is the collaborative effort of Open Your Ears Records founder,
-    Adam Hickok, and awarded producer, Will Beasley. Fit with two studios, a
-    full kitchen, and comfortable living quarters, The Bakery has everything you
-    need to create your next masterpiece.
+    Located in the vibrant Scotts Addition neighborhood of Richmond, Virginia,
+    The Bakery Recording Studio is within minutes of everything the city of
+    Richmond has to offer. The Bakery is the perfect location to record,
+    regardless of the size of the project. The state of the art studios are
+    equipped with two separate live/control rooms, and also offer other
+    amenities to make your stay comfortable.
   </p>
-  <p class="">Can you smell what's cookin'?</p>
 </div>
-<div class="section-img section-img--studioA"></div>
+<div class="section-img">
+  <img
+    src="/img/photos/studio-a/3-live-light.webp"
+    alt="Live room with sound-proof walls and drumset."
+    loading="lazy"
+  />
+</div>
 <div class="section">
   <h2>Studio A</h2>
   <p>
-    Our large room with 3 iso booths. Here is some more text about studio one.
-    It’s number one. Not number two. Just like you.
+    Our Flagship studio features a large live room and three isolation booths.
+    The control room has a warm and welcoming vibe that will make any musician
+    feel at home.
   </p>
   <a class="btn" href="/pages/studio-a/">View Studio A</a>
 </div>
-<div class="section-img section-img--studioB"></div>
+<div class="section-img">
+  <img
+    src="/img/photos/studio-b/2-live-room.webp"
+    alt="Studio B live room with curtained walls and drumset"
+    loading="lazy"
+  />
+</div>
 <div class="section">
   <h2>Studio B</h2>
-  <p>Some real nice text about studio two. It’s real nice. Got it? Nice</p>
+  <p>
+    Despite being the smaller of the two, Studio B is equipped to handle your
+    project. It Features a live/control room that is perfect for artists on a
+    budget.
+  </p>
   <a class="btn" href="/pages/studio-b/">View Studio B</a>
 </div>
 <div class="section section--alt">
-  <h2>Recent Artists</h2>
-  <div class="grid"></div>
+  <h2>Discography</h2>
+  {% include "discography.njk" %}
 </div>
 <div class="section">
   <p>Let's make music</p>

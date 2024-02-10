@@ -1,9 +1,18 @@
 form {
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
+  max-width: $content-max-width;
 
   @include respond("tablet") {
-    margin-inline: 5rem;
+    .input-row {
+      display: flex;
+      justify-content: space-between;
+
+      .input-wrapper {
+        width: 49%;
+      }
+    }
   }
 }
 

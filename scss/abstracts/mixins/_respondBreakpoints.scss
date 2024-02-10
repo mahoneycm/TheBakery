@@ -1,10 +1,18 @@
 @mixin respond($bp) {
-  @if $bp == tablet {
-    @media screen and (min-width: 800px) {
+  @if $bp == mobile {
+    @media screen and (min-width: 450px) {
+      @content;
+    }
+  } @else if $bp == tablet {
+    @media screen and (min-width: 970px) {
       @content;
     }
   } @else if $bp == desktop {
     @media screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $bp == widescreen {
+    @media screen and (min-width: 1400px) {
       @content;
     }
   }

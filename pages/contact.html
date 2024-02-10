@@ -1,35 +1,44 @@
 ---
 title: Contact Us - The Bakery
 layout: page-base
-hero: "/img/photos/studio-a/couch.jpg"
+hero: "/img/photos/misc/panels.webp"
 badge: "/img/badges/Contact.png"
+badgeAlt: "Get in contact"
 ---
 
+<h1 class="sr-only">Get in contact</h1>
 <div class="section">
   <p>
     We’re ready to get to get to work! Fill out the form below to drop us a
     line. We’ll be in touch with next steps and to work out the details.
   </p>
 
-  <form name="contact" netlify>
-    <div class="input-wrapper">
-      <label for="name">Name</label>
-      <input type="text" id="name" />
-    </div>
+  <form
+    id="contact-form"
+    name="contact"
+    netlify
+    netlify-honeypot="honeypot-input"
+  >
+    <p class="hidden">
+      <label>
+        Don’t fill this out if you’re human: <input name="honeypot-input" />
+      </label>
+    </p>
+    <div class="input-row">
+      <div class="input-wrapper">
+        <label for="name">Name</label>
+        <input type="text" name="name" required />
+      </div>
 
-    <div class="input-wrapper">
-      <label for="email">Email</label>
-      <input type="email" id="email" />
-    </div>
-
-    <div class="input-wrapper">
-      <label for="date">Dates</label>
-      <input type="date" class="date" />
+      <div class="input-wrapper">
+        <label for="email">Email</label>
+        <input type="email" name="email" required />
+      </div>
     </div>
 
     <div class="input-wrapper">
       <label for="info">Tell us about your project</label>
-      <textarea name="info"></textarea>
+      <textarea name="info" required></textarea>
     </div>
 
     <input type="submit" class="btn" value="Submit" />

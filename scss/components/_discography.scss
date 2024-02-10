@@ -1,0 +1,22 @@
+.discography {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  &--tile {
+    background-color: $teal;
+    display: block;
+    list-style: none;
+    width: 31%;
+
+    @include respond(tablet) {
+      width: 20%;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}

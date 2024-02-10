@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  max-width: 800px;
+  max-width: $content-max-width;
 }
 
 .hero {
@@ -25,7 +25,7 @@ p {
 }
 
 .section {
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
 
   &:last-of-type {
